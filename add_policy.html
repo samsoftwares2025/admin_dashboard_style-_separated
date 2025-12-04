@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>HR Dashboard - Add Organization Policy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="static/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">ABC</div>
+                    <div class="logo-text">ABC Technologies</div>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
+                        <span class="nav-text">Employees</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a href="employee_master.html" class="submenu-link">Employee Master Data</a></li>
+                        <li><a href="employee_contact_personal_info.html" class="submenu-link">Contact & Personal
+                                Info</a></li>
+                        <li><a href="employment_history.html" class="submenu-link">Employment History</a></li>
+                        <li><a href="visa_pro_work.html" class="submenu-link">Visa and Pro Work</a></li>
+                    </ul>
+                </li>
+
+                <!-- Organization (active) -->
+                <li class="nav-item nav-has-submenu open">
+                    <button class="nav-toggle" aria-expanded="true">
+                        <span class="nav-icon"><i class="fa-solid fa-building"></i></span>
+                        <span class="nav-text">Organization</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="false">
+                        <li><a href="department_and_cost_ceneters.html" class="submenu-link">Departments & Cost
+                                Centers</a></li>
+                        <li><a href="roles_and_permissions_listing.html" class="submenu-link">Roles & Permissions</a>
+                        </li>
+                        <li><a href="policies_listing.html" class="submenu-link active-submenu">Policies</a></li>
+                        <li><a class="submenu-link">Company Rules</a></li>
+                        <li><a class="submenu-link">Compliance Documentation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-user-tie"></i></span>
+                        <span class="nav-text">Recruitment & ATS</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Job Management</a></li>
+                        <li><a class="submenu-link">Candidate Management</a></li>
+                        <li><a class="submenu-link">Interview Management</a></li>
+                        <li><a class="submenu-link">Offer & Hiring</a></li>
+                        <li><a class="submenu-link">Onboarding</a></li>
+                        <li><a class="submenu-link">Offboarding</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-clock"></i></span>
+                        <span class="nav-text">Attendance</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Attendance</a></li>
+                        <li><a class="submenu-link">Leave</a></li>
+                        <li><a class="submenu-link">Timesheets</a></li>
+                        <li><a class="submenu-link">Shift Management</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+                        <span class="nav-text">Payroll Management</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Payroll Setup</a></li>
+                        <li><a class="submenu-link">Payroll Processing</a></li>
+                        <li><a class="submenu-link">Payroll Output</a></li>
+                        <li><a class="submenu-link">Compliance</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span>
+                        <span class="nav-text">Performance & Appraisals</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Goal & KPI Management</a></li>
+                        <li><a class="submenu-link">Assessment</a></li>
+                        <li><a class="submenu-link">Appraisal Cycles</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <span class="nav-text">Learning & Development</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Training Management</a></li>
+                        <li><a class="submenu-link">e-Learning</a></li>
+                        <li><a class="submenu-link">Skill Development</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-heart"></i></span>
+                        <span class="nav-text">Employee Engagement</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Surveys & Feedback</a></li>
+                        <li><a class="submenu-link">Recognition</a></li>
+                        <li><a class="submenu-link">Communication</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-sitemap"></i></span>
+                        <span class="nav-text">Talent & Succession Planning</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Competency Framework</a></li>
+                        <li><a class="submenu-link">Succession Planning</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-gift"></i></span>
+                        <span class="nav-text">Benefits & Compensation</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Health & Insurance Plans</a></li>
+                        <li><a class="submenu-link">Allowance Policies</a></li>
+                        <li><a class="submenu-link">Bonus Planning</a></li>
+                        <li><a class="submenu-link">Increment Budgeting</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                        <span class="nav-text">Expense</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Expense Category</a></li>
+                        <li><a class="submenu-link">Expenses</a></li>
+                        <li><a class="submenu-link">Expense Claims</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-boxes-stacked"></i></span>
+                        <span class="nav-text">Asset Management</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Fixed Assets</a></li>
+                        <li><a class="submenu-link">Depreciation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-bar"></i></span>
+                        <span class="nav-text">Reporting & Analytics</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Attendance Reports</a></li>
+                        <li><a class="submenu-link">Leave Trends</a></li>
+                        <li><a class="submenu-link">Payroll Summary</a></li>
+                        <li><a class="submenu-link">Employee Analytics</a></li>
+                        <li><a class="submenu-link">Custom Reports</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-users-gear"></i></span>
+                        Customer Management
+                    </a>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                        <span class="nav-text">Loan / EMI / Advance Module</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Employee Loan Request</a></li>
+                        <li><a class="submenu-link">EMI Calculation</a></li>
+                        <li><a class="submenu-link">EMI Auto Deduction</a></li>
+                        <li><a class="submenu-link">Loan Balance Status</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                        Settings
+                    </a>
+                </li>
+
+                <button id="logoutBtn" class="nav-link logout-btn-mob" type="button" title="Log out"
+                    aria-label="Log out">
+                    <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                    Logout
+                </button>
+            </ul>
+
+            <div class="user-profile">
+                <div class="user-avatar">AB</div>
+                <div class="user-info">
+                    <h4>Abhinav B</h4>
+                    <p>Admin • ID: #AD-2048</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <div class="header">
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="page-title">
+                    <h1>Welcome Abhinav B</h1>
+                </div>
+
+                <div class="header-actions">
+                    <button class="notification-btn" title="Notifications">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="current-date">Monday, Dec 1, 2025</div>
+                    <button id="logoutBtnHeader" class="logout-btn" type="button">
+                        <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+            <div class="the_line"></div>
+
+            <div class="page-title">
+                <h3>Add New Policy
+                    <span class="pill-badge"><i class="fa-solid fa-shield-halved"></i> Organization Policy</span>
+                </h3>
+                <p class="subtitle">
+                    Define policy metadata, applicability and content. You can save as draft or publish immediately.
+                </p>
+            </div>
+
+            <div class="form-container">
+                <form id="addPolicyForm">
+                    <!-- BASIC DETAILS -->
+                    <div class="form-section">
+                        <h2 class="section-title">
+                            <i class="fa-solid fa-file-circle-plus"></i>
+                            Basic Details
+                        </h2>
+
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label class="form-label required">Policy Name</label>
+                                <input type="text" class="form-input" name="policyName"
+                                    placeholder="e.g. Travel & Expense Reimbursement Policy">
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label required">Policy Category</label>
+                                <select class="form-select" name="policyCategory">
+                                    <option value="">Select category</option>
+                                    <option value="HR & People">HR &amp; People</option>
+                                    <option value="Leave & Attendance">Leave &amp; Attendance</option>
+                                    <option value="Payroll & Compensation">Payroll &amp; Compensation</option>
+                                    <option value="IT & Security">IT &amp; Security</option>
+                                    <option value="Code of Conduct">Code of Conduct</option>
+                                    <option value="Health & Safety">Health &amp; Safety</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Policy Code / ID</label>
+                                <input type="text" class="form-input" name="policyCode"
+                                    placeholder="e.g. POL-TRAVEL-001">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label required">Status</label>
+                                <select class="form-select" name="policyStatus">
+                                    <option value="Draft">Draft</option>
+                                    <option value="Active">Active</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Version</label>
+                                <input type="text" class="form-input" name="policyVersion" value="1.0">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label required">Policy Owner</label>
+                                <select class="form-select" name="policyOwner">
+                                    <option value="">Select owner</option>
+                                    <option value="HR">HR</option>
+                                    <option value="HR & Admin">HR &amp; Admin</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="IT & Security">IT &amp; Security</option>
+                                    <option value="Legal">Legal</option>
+                                    <option value="Admin">Admin</option>
+                                </select>
+                               
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label required">Effective From</label>
+                                <input type="date" class="form-input" name="effectiveFrom">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Review Frequency</label>
+                                <select class="form-select" name="reviewFrequency">
+                                    <option value="">No fixed review</option>
+                                    <option value="6 months">Every 6 months</option>
+                                    <option value="12 months">Every 12 months</option>
+                                    <option value="24 months">Every 24 months</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- APPLICABILITY & SCOPE -->
+                    <div class="form-section">
+                        <h2 class="section-title">
+                            <i class="fa-solid fa-sitemap"></i>
+                            Applicability & Scope
+                        </h2>
+
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label class="form-label required">Applies To</label>
+                                <div class="inline-checkbox-group">
+                                    <label>
+                                        <input type="checkbox" name="appliesAllEmployees" checked>
+                                        <span>All Employees</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="appliesManagers">
+                                        <span>Managers Only</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="appliesContractors">
+                                        <span>Contract / Temporary Staff</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="appliesInterns">
+                                        <span>Interns / Trainees</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="form-label">Scope</label>
+                                <div class="scope-tags">
+                                    <label class="scope-pill">
+                                        <input type="checkbox" name="scopeCompany" checked>
+                                        <span>Company-wide</span>
+                                    </label>
+                                    <label class="scope-pill">
+                                        <input type="checkbox" name="scopeDepartment">
+                                        <span>Specific Departments</span>
+                                    </label>
+                                    <label class="scope-pill">
+                                        <input type="checkbox" name="scopeLocation">
+                                        <span>Specific Locations</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Department(s)</label>
+                                <select class="form-select" name="departments" multiple>
+                                    <option>Engineering</option>
+                                    <option>HR</option>
+                                    <option>Finance</option>
+                                    <option>Sales</option>
+                                    <option>Operations</option>
+                                    <option>Support</option>
+                                </select>
+                                <span class="hint-text">Hold Ctrl / Command to select multiple departments.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Location(s)</label>
+                                <select class="form-select" name="locations" multiple>
+                                    <option>Head Office - New York</option>
+                                    <option>Branch Office - California</option>
+                                    <option>Branch Office - Texas</option>
+                                    <option>Remote</option>
+                                </select>
+                                <span class="hint-text">Leave empty if policy is valid for all locations.</span>
+                            </div>
+
+                            <!-- <div class="form-group full-width">
+                            <label class="form-label">Tags / Keywords</label>
+                            <input type="text" class="form-input" name="policyTags"
+                                   placeholder="e.g. travel, expense, reimbursement, client visit">
+                            <div class="tag-row">
+                                <span class="small-tag">Suggested: “travel”</span>
+                                <span class="small-tag">“reimbursement”</span>
+                                <span class="small-tag">“onsite”</span>
+                            </div>
+                        </div> -->
+                        </div>
+                    </div>
+
+                    <!-- CONTENT -->
+                    <div class="form-section">
+                        <h2 class="section-title">
+                            <i class="fa-solid fa-file-lines"></i>
+                            Policy Content
+                        </h2>
+
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label class="form-label required">Short Summary</label>
+                                <textarea class="form-textarea" name="policySummary"
+                                    placeholder="High-level overview of what this policy covers, in 2–3 lines."></textarea>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="form-label required">Detailed Policy Text</label>
+                                <textarea class="form-textarea" name="policyDetails"
+                                    placeholder="Paste or type the full policy text here, including sections, responsibilities and exceptions."></textarea>
+                             
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="form-label">Attachments (Optional)</label>
+                                <div class="attachment-box">
+                                    <span>
+                                        <i class="fa-solid fa-paperclip"></i>
+                                        <span>Upload PDF / DOCX / PPT</span>
+                                    </span>
+                                    <label class="btn btn-secondary" style="margin:0; cursor:pointer;">
+                                        <i class="fa-solid fa-upload"></i>
+                                        <span>Choose File</span>
+                                        <input type="file" name="policyAttachment" style="display:none;"
+                                            accept=".pdf,.doc,.docx,.ppt,.pptx">
+                                    </label>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COMPLIANCE & ACKNOWLEDGEMENT -->
+                    <div class="form-section">
+                        <h2 class="section-title">
+                            <i class="fa-solid fa-check-double"></i>
+                            Compliance & Acknowledgement
+                        </h2>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Employee Acknowledgement</label>
+                                <div class="toggle-row">
+                                    <input type="checkbox" name="requiresAck" checked>
+                                    <span>Require employees to acknowledge this policy</span>
+                                </div>
+                                <span class="hint-text">If enabled, the system can track who has read and accepted this
+                                    policy.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Acknowledgement Due (Days)</label>
+                                <input type="number" min="0" class="form-input" name="ackDueDays" value="7">
+                                <span class="hint-text">Days after publishing within which acknowledgement is
+                                    expected.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Reminder Settings</label>
+                                <div class="inline-checkbox-group">
+                                    <label>
+                                        <input type="checkbox" name="reminderEmail" checked>
+                                        <span>Email reminders</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="reminderPortal" checked>
+                                        <span>Portal notifications</span>
+                                    </label>
+                                </div>
+                                <span class="hint-text">Reminders will be sent to employees who have not yet
+                                    acknowledged.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Enforcement Notes (Internal)</label>
+                                <textarea class="form-textarea" name="internalNotes"
+                                    placeholder="Internal guidance for HR / managers on how to enforce or interpret this policy."></textarea>
+                                <span class="hint-text">Not visible to employees in the self-service portal.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACTIONS -->
+                    <div class="form-actions">
+                        <!-- <div class="required-note">
+                        <span class="badge-soft"><i class="fa-solid fa-circle-info"></i>&nbsp;Note</span>
+                        &nbsp;Fields marked with <span style="color:var(--danger);">*</span> are mandatory.
+                    </div> -->
+                        <div class="form-actions-right">
+                            <!-- <a href="organization_policies.html" class="btn btn-ghost">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back to Policies
+                        </a> -->
+                            <button type="button" class="btn btn-secondary" id="resetPolicyForm">
+                                <i class="fa-solid fa-rotate-left"></i>
+                                Reset
+                            </button>
+                            <button type="submit" class="btn btn-primary" id="publishPolicyBtn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Publish Policy
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <script>
+        // Sidebar & nav behaviour (same pattern as your other pages)
+        (function () {
+            const sidebarEl = document.getElementById('sidebar');
+            const menuBtn = document.getElementById('menuBtn');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            const toggles = document.querySelectorAll('.nav-toggle');
+            toggles.forEach(btn => {
+                const li = btn.closest('.nav-has-submenu');
+                const submenu = li.querySelector('.submenu');
+
+                btn.addEventListener('click', () => {
+                    const isOpen = li.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', String(isOpen));
+                    submenu.setAttribute('aria-hidden', String(!isOpen));
+
+                    document.querySelectorAll('.nav-has-submenu').forEach(other => {
+                        if (other !== li && other.classList.contains('open')) {
+                            other.classList.remove('open');
+                            const otherBtn = other.querySelector('.nav-toggle');
+                            const otherSub = other.querySelector('.submenu');
+                            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                            if (otherSub) otherSub.setAttribute('aria-hidden', 'true');
+                        }
+                    });
+                });
+
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            });
+
+            function openMobileSidebar() {
+                sidebarEl.classList.add('mobile-open', 'mobile-visible');
+                overlay.classList.add('show');
+                overlay.setAttribute('aria-hidden', 'false');
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeMobileSidebar() {
+                sidebarEl.classList.remove('mobile-open', 'mobile-visible');
+                overlay.classList.remove('show');
+                overlay.setAttribute('aria-hidden', 'true');
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+            }
+
+            function handleResize() {
+                if (window.innerWidth <= 900) {
+                    if (!sidebarEl.classList.contains('mobile-visible')) {
+                        sidebarEl.style.transform = 'translateX(-110%)';
+                    } else {
+                        sidebarEl.style.transform = 'translateX(0)';
+                    }
+                    sidebarEl.style.position = 'fixed';
+                    sidebarEl.style.height = '100vh';
+                    sidebarEl.style.top = '0';
+                    sidebarEl.style.left = '0';
+                    sidebarEl.style.zIndex = '40';
+                } else {
+                    sidebarEl.style.transform = '';
+                    sidebarEl.style.position = '';
+                    sidebarEl.style.height = '';
+                    sidebarEl.style.top = '';
+                    sidebarEl.style.left = '';
+                    sidebarEl.style.zIndex = '';
+                    overlay.classList.remove('show');
+                    overlay.setAttribute('aria-hidden', 'true');
+                    if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+                    sidebarEl.classList.remove('mobile-visible');
+                }
+            }
+
+            window.addEventListener('resize', handleResize);
+            handleResize();
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                    if (expanded) {
+                        closeMobileSidebar();
+                    } else {
+                        openMobileSidebar();
+                    }
+                });
+            }
+
+            overlay.addEventListener('click', () => {
+                closeMobileSidebar();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                    if (overlay.classList.contains('show')) {
+                        closeMobileSidebar();
+                    }
+                }
+            });
+        })();
+        // policy form logic
+        const PolicyForm = document.getElementById('addPolicyForm');
+        const resetPolicyForm = document.getElementById('resetPolicyForm');
+
+        if (resetPolicyForm && PolicyForm) {
+            resetPolicyForm.addEventListener('click', () => {
+                PolicyForm.reset();
+            });
+        }
+
+        // Form behaviour (basic, front-end only)
+        const addPolicyForm = document.getElementById('addPolicyForm');
+        const saveDraftBtn = document.getElementById('saveDraftBtn');
+        const publishPolicyBtn = document.getElementById('publishPolicyBtn');
+
+        if (saveDraftBtn) {
+            saveDraftBtn.addEventListener('click', function () {
+                // You can replace this with real draft-save logic
+                alert('Policy saved as draft (front-end placeholder).');
+            });
+        }
+
+        if (addPolicyForm) {
+            addPolicyForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Replace with real submit logic / API call
+                alert('Policy submitted for publishing (front-end placeholder).');
+            });
+        }
+    </script>
+
+</body>
+
+</html>

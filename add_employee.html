@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>HR Dashboard - Add Employee</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+   <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">ABC</div>
+                    <div class="logo-text">ABC Technologies</div>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
+                        <span class="nav-text">Employees</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="employee_master.html" class="submenu-link">Employee Master Data</a></li>
+                        <li><a href="employee_contact_personal_info.html" class="submenu-link">Contact & Personal Info</a></li>
+                        <li><a href="employment_history.html" class="submenu-link">Employment History</a></li>
+                        <li><a href="visa_pro_work.html" class="submenu-link">Visa and Pro Work</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-building"></i></span>
+                        <span class="nav-text">Organization</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="department_and_cost_ceneters.html" class="submenu-link">Departments & Cost Centers</a></li>
+                        <li><a href="roles_and_permissions_listing.html" class="submenu-link">Roles & Permissions</a></li>
+                        <li><a href="policies_listing.html" class="submenu-link">Policies</a></li>
+                        <li><a class="submenu-link">Company Rules</a></li>
+                        <li><a class="submenu-link">Compliance Documentation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-user-tie"></i></span>
+                        <span class="nav-text">Recruitment & ATS</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Job Management</a></li>
+                        <li><a class="submenu-link">Candidate Management</a></li>
+                        <li><a class="submenu-link">Interview Management</a></li>
+                        <li><a class="submenu-link">Offer & Hiring</a></li>
+                        <li><a class="submenu-link">Onboarding</a></li>
+                        <li><a class="submenu-link">Offboarding</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-clock"></i></span>
+                        <span class="nav-text">Attendance</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Attendance</a></li>
+                        <li><a class="submenu-link">Leave</a></li>
+                        <li><a class="submenu-link">Timesheets</a></li>
+                        <li><a class="submenu-link">Shift Management</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+                        <span class="nav-text">Payroll Management</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Payroll Setup</a></li>
+                        <li><a class="submenu-link">Payroll Processing</a></li>
+                        <li><a class="submenu-link">Payroll Output</a></li>
+                        <li><a class="submenu-link">Compliance</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span>
+                        <span class="nav-text">Performance & Appraisals</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Goal & KPI Management</a></li>
+                        <li><a class="submenu-link">Assessment</a></li>
+                        <li><a class="submenu-link">Appraisal Cycles</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <span class="nav-text">Learning & Development</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Training Management</a></li>
+                        <li><a class="submenu-link">e-Learning</a></li>
+                        <li><a class="submenu-link">Skill Development</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-heart"></i></span>
+                        <span class="nav-text">Employee Engagement</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Surveys & Feedback</a></li>
+                        <li><a class="submenu-link">Recognition</a></li>
+                        <li><a class="submenu-link">Communication</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-sitemap"></i></span>
+                        <span class="nav-text">Talent & Succession Planning</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Competency Framework</a></li>
+                        <li><a class="submenu-link">Succession Planning</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-gift"></i></span>
+                        <span class="nav-text">Benefits & Compensation</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Health & Insurance Plans</a></li>
+                        <li><a class="submenu-link">Allowance Policies</a></li>
+                        <li><a class="submenu-link">Bonus Planning</a></li>
+                        <li><a class="submenu-link">Increment Budgeting</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                        <span class="nav-text">Expense</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Expense Category</a></li>
+                        <li><a class="submenu-link">Expenses</a></li>
+                        <li><a class="submenu-link">Expense Claims</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-boxes-stacked"></i></span>
+                        <span class="nav-text">Asset Management</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Fixed Assets</a></li>
+                        <li><a class="submenu-link">Depreciation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-bar"></i></span>
+                        <span class="nav-text">Reporting & Analytics</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Attendance Reports</a></li>
+                        <li><a class="submenu-link">Leave Trends</a></li>
+                        <li><a class="submenu-link">Payroll Summary</a></li>
+                        <li><a class="submenu-link">Employee Analytics</a></li>
+                        <li><a class="submenu-link">Custom Reports</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-users-gear"></i></span>
+                        Customer Management
+                    </a>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                        <span class="nav-text">Loan / EMI / Advance Module</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Employee Loan Request</a></li>
+                        <li><a class="submenu-link">EMI Calculation</a></li>
+                        <li><a class="submenu-link">EMI Auto Deduction</a></li>
+                        <li><a class="submenu-link">Loan Balance Status</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                        Settings
+                    </a>
+                </li>
+
+                <button id="logoutBtn" class="nav-link logout-btn-mob" type="button" title="Log out"
+                    aria-label="Log out">
+                    <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                    Logout
+                </button>
+            </ul>
+
+            <div class="user-profile">
+                <div class="user-avatar">AB</div>
+                <div class="user-info">
+                    <h4>Abhinav B</h4>
+                    <p>Admin • ID: #AD-2048</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <div class="header">
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="page-title">
+                    <h1>Welcome Abhinav B</h1>
+                </div>
+
+                <div class="header-actions">
+                    <button class="notification-btn" title="Notifications">
+                        🔔
+                        <span class="notification-badge">2</span>
+                    </button>
+                    <div class="current-date">Monday, Dec 1, 2025</div>
+                    <button id="logoutBtnHeader" class="logout-btn" type="button" title="Log out" aria-label="Log out">
+                        <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        Logout
+                    </button>
+                </div>
+            </div>
+            <div class="the_line"></div>
+            <div class="page-title">
+                <h3>Add New Employee</h3>
+                <p>Fill in the employee details to create a new profile</p>
+            </div>
+            <div class="success-message" id="successMessage">
+                <i class="fa-solid fa-check-circle"></i>
+                Employee added successfully!
+            </div>
+
+            <form class="form-container" id="employeeForm">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-user"></i>
+                        Personal Information
+                    </h2>
+
+                    <div class="form-group full-width">
+                        <div class="photo-upload">
+                            <div class="photo-preview" id="photoPreview">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div>
+                                <label for="photoUpload" class="upload-btn">
+                                    <i class="fa-solid fa-upload"></i> Upload Photo
+                                </label>
+                                <input type="file" id="photoUpload" class="file-input" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-grid" style="margin-top: 20px;">
+                        <div class="form-group">
+                            <label class="form-label required">First Name</label>
+                            <input type="text" class="form-input" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Last Name</label>
+                            <input type="text" class="form-input" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Date of Birth</label>
+                            <input type="date" class="form-input" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Gender</label>
+                            <select class="form-select" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Personal Email</label>
+                            <input type="email" class="form-input" name="personalEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Phone Number</label>
+                            <input type="tel" class="form-input" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width" style="margin-top: 20px;">
+                        <label class="form-label required">Address</label>
+                        <textarea class="form-textarea" name="address" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Employment Details -->
+                <div class="form-section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Employment Details
+                    </h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label required">Employee ID</label>
+                            <input type="text" class="form-input" name="employeeId" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Company Email</label>
+                            <input type="email" class="form-input" name="companyEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Joining Date</label>
+                            <input type="date" class="form-input" name="joiningDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Employment Type</label>
+                            <select class="form-select" name="employmentType" required>
+                                <option value="">Select Type</option>
+                                <option value="fulltime">Full-Time</option>
+                                <option value="parttime">Part-Time</option>
+                                <option value="contract">Contract</option>
+                                <option value="intern">Intern</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Department</label>
+                            <select class="form-select" name="department" required>
+                                <option value="">Select Department</option>
+                                <option value="engineering">Engineering</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="hr">HR</option>
+                                <option value="sales">Sales</option>
+                                <option value="finance">Finance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Designation</label>
+                            <input type="text" class="form-input" name="designation" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Reporting Manager</label>
+                            <select class="form-select" name="manager" required>
+                                <option value="">Select Manager</option>
+                                <option value="john">John Smith - Engineering Lead</option>
+                                <option value="sarah">Sarah Johnson - Marketing Director</option>
+                                <option value="mike">Mike Davis - HR Manager</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Work Location</label>
+                            <select class="form-select" name="location" required>
+                                <option value="">Select Location</option>
+                                <option value="hq">Head Office - New York</option>
+                                <option value="remote">Remote</option>
+                                <option value="branch1">Branch Office - California</option>
+                                <option value="branch2">Branch Office - Texas</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visa & Pro Work -->
+                <div class="form-section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-passport"></i>
+                        Visa & Pro Work
+                    </h2>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label required">Citizenship / Nationality</label>
+                            <select class="form-select" name="citizenship" required>
+                                <option value="">Select Citizenship / Nationality</option>
+                                <option value="usa">United States</option>
+                                <option value="india">India</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="canada">Canada</option>
+                                <option value="germany">Germany</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required">Passport Number</label>
+                            <input type="text" class="form-input" name="passportNumber" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required">Visa / Permit Type</label>
+                            <select class="form-select" name="visaType" required>
+                                <option value="">Select Visa / Permit Type</option>
+                                <option value="h1b">H1B</option>
+                                <option value="l1">L1</option>
+                                <option value="b1b2">B1/B2</option>
+                                <option value="work_permit">Work Permit</option>
+                                <option value="ict">Intra-company Transfer</option>
+                                <option value="resident">Resident Permit</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required">Visa / Permit Number</label>
+                            <input type="text" class="form-input" name="visaNumber" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required">Country of Work (Visa)</label>
+                            <select class="form-select" name="visaCountry" required>
+                                <option value="">Select Country of Work</option>
+                                <option value="usa">United States</option>
+                                <option value="india">India</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="canada">Canada</option>
+                                <option value="germany">Germany</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required">Visa Issue Date</label>
+                            <input type="date" class="form-input" name="visaIssueDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required">Visa Expiry Date</label>
+                            <input type="date" class="form-input" name="visaExpiryDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required">Visa Status</label>
+                            <select class="form-select" name="visaStatus" required>
+                                <option value="">Select Status</option>
+                                <option value="valid">Valid</option>
+                                <option value="expiring_soon">Expiring Soon</option>
+                                <option value="expired">Expired</option>
+                                <option value="applied">Applied</option>
+                                <option value="not_required">Not Required</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group full-width" style="margin-top: 20px;">
+                        <label class="form-label">Visa / Pro Work Notes</label>
+                        <textarea class="form-textarea" name="visaNotes" rows="3"
+                            placeholder="Any additional notes on visa processing, PRO work, dependents, renewal reminders, etc."></textarea>
+                    </div>
+                </div>
+
+                <!-- Compensation -->
+                <div class="form-section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        Compensation Details
+                    </h2>
+                    <div class="form-grid-3">
+                        <div class="form-group">
+                            <label class="form-label required">Annual CTC</label>
+                            <input type="number" class="form-input" name="ctc" required placeholder="$">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Basic Salary</label>
+                            <input type="number" class="form-input" name="basicSalary" required placeholder="$">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Variable Pay</label>
+                            <input type="number" class="form-input" name="variablePay" placeholder="$">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Bank Name</label>
+                            <input type="text" class="form-input" name="bankName">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Account Number</label>
+                            <input type="text" class="form-input" name="accountNumber">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">IFSC Code</label>
+                            <input type="text" class="form-input" name="ifscCode">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="form-section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-phone"></i>
+                        Emergency Contact
+                    </h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label required">Contact Name</label>
+                            <input type="text" class="form-input" name="emergencyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Relationship</label>
+                            <input type="text" class="form-input" name="emergencyRelation" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Phone Number</label>
+                            <input type="tel" class="form-input" name="emergencyPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" name="emergencyEmail">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Reset
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-check"></i>
+                        Add Employee
+                    </button>
+                </div>
+            </form>
+
+        </main>
+    </div>
+
+    <div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <script>
+        // Chart color palette (safe if you later add canvases)
+        const colors = {
+            blueDark: '#2d78b5',
+            blueLight: '#8fc3e8',
+            accent1: '#58a3d7',
+            accent2: '#3b83b7',
+            muted: '#e9eef5'
+        };
+
+        // Only initialize charts if those canvases exist
+        const miniDonut = document.getElementById('miniDonut');
+        if (miniDonut) {
+            new Chart(miniDonut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Engineering', 'Marketing', 'HR'],
+                    datasets: [{
+                        data: [120, 65, 60],
+                        backgroundColor: [colors.blueDark, colors.blueLight, '#dfe9f3'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    cutout: '70%',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: false }
+                    }
+                }
+            });
+        }
+
+        const headCountChart = document.getElementById('headCountChart');
+        if (headCountChart) {
+            new Chart(headCountChart, {
+                type: 'bar',
+                data: {
+                    labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+                    datasets: [{
+                        label: 'Active',
+                        data: [550, 152, 155, 158, 160, 162],
+                        backgroundColor: colors.blueDark,
+                        borderRadius: 6
+                    }, {
+                        label: 'Inactive',
+                        data: [12, 10, 9, 8, 7, 5],
+                        backgroundColor: '#B0BEC5',
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' } },
+                        x: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: true, position: 'bottom' }
+                    }
+                }
+            });
+        }
+
+        const ctcChart = document.getElementById('ctcChart');
+        if (ctcChart) {
+            new Chart(ctcChart, {
+                type: 'bar',
+                data: {
+                    labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                    datasets: [{
+                        type: 'bar',
+                        label: 'CTC',
+                        data: [70, 75, 72, 78, 76, 80],
+                        backgroundColor: '#D3D3D3',
+                        borderRadius: 6
+                    }, {
+                        type: 'line',
+                        label: 'Net Salary',
+                        data: [60, 62, 58, 63, 61, 65],
+                        borderColor: '#FFCA28',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#FFCA28'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' } },
+                        x: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: true, position: 'bottom' }
+                    }
+                }
+            });
+        }
+    </script>
+
+    <script>
+        (function () {
+            const sidebarEl = document.getElementById('sidebar');
+            const menuBtn = document.getElementById('menuBtn');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            // Submenu toggle
+            const toggles = document.querySelectorAll('.nav-toggle');
+            toggles.forEach(btn => {
+                const li = btn.closest('.nav-has-submenu');
+                const submenu = li.querySelector('.submenu');
+
+                btn.addEventListener('click', () => {
+                    const isOpen = li.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', String(isOpen));
+                    submenu.setAttribute('aria-hidden', String(!isOpen));
+
+                    document.querySelectorAll('.nav-has-submenu').forEach(other => {
+                        if (other !== li && other.classList.contains('open')) {
+                            other.classList.remove('open');
+                            const otherBtn = other.querySelector('.nav-toggle');
+                            const otherSub = other.querySelector('.submenu');
+                            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                            if (otherSub) otherSub.setAttribute('aria-hidden', 'true');
+                        }
+                    });
+                });
+
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            });
+
+            // Close submenus when clicking outside sidebar
+            document.addEventListener('click', (e) => {
+                const sidebar = document.querySelector('aside.sidebar');
+                if (!sidebar) return;
+                if (!sidebar.contains(e.target)) {
+                    document.querySelectorAll('.nav-has-submenu.open').forEach(openItem => {
+                        openItem.classList.remove('open');
+                        const b = openItem.querySelector('.nav-toggle');
+                        const s = openItem.querySelector('.submenu');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                        if (s) s.setAttribute('aria-hidden', 'true');
+                    });
+                }
+            });
+
+            function openMobileSidebar() {
+                sidebarEl.classList.add('mobile-open', 'mobile-visible');
+                overlay.classList.add('show');
+                overlay.setAttribute('aria-hidden', 'false');
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeMobileSidebar() {
+                sidebarEl.classList.remove('mobile-open', 'mobile-visible');
+                overlay.classList.remove('show');
+                overlay.setAttribute('aria-hidden', 'true');
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+            }
+
+            function handleResize() {
+                if (window.innerWidth <= 900) {
+                    if (!sidebarEl.classList.contains('mobile-visible')) {
+                        sidebarEl.style.transform = 'translateX(-110%)';
+                    } else {
+                        sidebarEl.style.transform = 'translateX(0)';
+                    }
+                    sidebarEl.style.position = 'fixed';
+                    sidebarEl.style.height = '100vh';
+                    sidebarEl.style.top = '0';
+                    sidebarEl.style.left = '0';
+                    sidebarEl.style.zIndex = '40';
+                } else {
+                    sidebarEl.style.transform = '';
+                    sidebarEl.style.position = '';
+                    sidebarEl.style.height = '';
+                    sidebarEl.style.top = '';
+                    sidebarEl.style.left = '';
+                    sidebarEl.style.zIndex = '';
+                    overlay.classList.remove('show');
+                    overlay.setAttribute('aria-hidden', 'true');
+                    if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+                    sidebarEl.classList.remove('mobile-visible');
+                }
+            }
+
+            window.addEventListener('resize', handleResize);
+            handleResize();
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                    if (expanded) {
+                        closeMobileSidebar();
+                    } else {
+                        openMobileSidebar();
+                    }
+                });
+            }
+
+            overlay.addEventListener('click', () => {
+                closeMobileSidebar();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                    if (overlay.classList.contains('show')) {
+                        closeMobileSidebar();
+                    }
+                }
+            });
+        })();
+
+        // Photo upload preview
+        document.getElementById('photoUpload').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const preview = document.getElementById('photoPreview');
+                    preview.innerHTML = `<img src="${e.target.result}" alt="Employee Photo">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Form submission
+        document.getElementById('employeeForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.add('show');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 3000);
+
+            const formData = new FormData(this);
+            console.log('Employee Data:', Object.fromEntries(formData));
+        });
+
+        function resetForm() {
+            document.getElementById('employeeForm').reset();
+            document.getElementById('photoPreview').innerHTML = '<i class="fa-solid fa-user"></i>';
+        }
+    </script>
+</body>
+
+</html>

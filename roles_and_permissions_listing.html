@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>HR Dashboard - Departments & Cost Centers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="static/style.css">
+    
+</head>
+
+<body>
+<div class="container">
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">ABC</div>
+                <div class="logo-text">ABC Technologies</div>
+            </a>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
+                    <span class="nav-text">Employees</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a href="employee_master.html" class="submenu-link">Employee Master Data</a></li>
+                    <li><a href="employee_contact_personal_info.html" class="submenu-link">Contact & Personal Info</a></li>
+                    <li><a href="employment_history.html" class="submenu-link">Employment History</a></li>
+                    <li><a href="visa_pro_work.html" class="submenu-link">Visa and Pro Work</a></li>
+                </ul>
+            </li>
+
+            <!-- Organization (active) -->
+            <li class="nav-item nav-has-submenu open">
+                <button class="nav-toggle" aria-expanded="true">
+                    <span class="nav-icon"><i class="fa-solid fa-building"></i></span>
+                    <span class="nav-text">Organization</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="false">
+                    <li><a href="department_and_cost_ceneters.html" class="submenu-link ">Departments & Cost Centers</a></li>
+                    <li><a href="roles_and_permissions_listing.html" class="submenu-link active-submenu">Roles & Permissions</a></li>
+                    <li><a href="policies_listing.html" class="submenu-link">Policies</a></li>
+                    <li><a class="submenu-link">Company Rules</a></li>
+                    <li><a class="submenu-link">Compliance Documentation</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-user-tie"></i></span>
+                    <span class="nav-text">Recruitment & ATS</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Job Management</a></li>
+                    <li><a class="submenu-link">Candidate Management</a></li>
+                    <li><a class="submenu-link">Interview Management</a></li>
+                    <li><a class="submenu-link">Offer & Hiring</a></li>
+                    <li><a class="submenu-link">Onboarding</a></li>
+                    <li><a class="submenu-link">Offboarding</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-clock"></i></span>
+                    <span class="nav-text">Attendance</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Attendance</a></li>
+                    <li><a class="submenu-link">Leave</a></li>
+                    <li><a class="submenu-link">Timesheets</a></li>
+                    <li><a class="submenu-link">Shift Management</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+                    <span class="nav-text">Payroll Management</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Payroll Setup</a></li>
+                    <li><a class="submenu-link">Payroll Processing</a></li>
+                    <li><a class="submenu-link">Payroll Output</a></li>
+                    <li><a class="submenu-link">Compliance</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span>
+                    <span class="nav-text">Performance & Appraisals</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Goal & KPI Management</a></li>
+                    <li><a class="submenu-link">Assessment</a></li>
+                    <li><a class="submenu-link">Appraisal Cycles</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <span class="nav-text">Learning & Development</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Training Management</a></li>
+                    <li><a class="submenu-link">e-Learning</a></li>
+                    <li><a class="submenu-link">Skill Development</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-heart"></i></span>
+                    <span class="nav-text">Employee Engagement</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Surveys & Feedback</a></li>
+                    <li><a class="submenu-link">Recognition</a></li>
+                    <li><a class="submenu-link">Communication</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-sitemap"></i></span>
+                    <span class="nav-text">Talent & Succession Planning</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Competency Framework</a></li>
+                    <li><a class="submenu-link">Succession Planning</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-gift"></i></span>
+                    <span class="nav-text">Benefits & Compensation</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Health & Insurance Plans</a></li>
+                    <li><a class="submenu-link">Allowance Policies</a></li>
+                    <li><a class="submenu-link">Bonus Planning</a></li>
+                    <li><a class="submenu-link">Increment Budgeting</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                    <span class="nav-text">Expense</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Expense Category</a></li>
+                    <li><a class="submenu-link">Expenses</a></li>
+                    <li><a class="submenu-link">Expense Claims</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-boxes-stacked"></i></span>
+                    <span class="nav-text">Asset Management</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Fixed Assets</a></li>
+                    <li><a class="submenu-link">Depreciation</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-bar"></i></span>
+                    <span class="nav-text">Reporting & Analytics</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Attendance Reports</a></li>
+                    <li><a class="submenu-link">Leave Trends</a></li>
+                    <li><a class="submenu-link">Payroll Summary</a></li>
+                    <li><a class="submenu-link">Employee Analytics</a></li>
+                    <li><a class="submenu-link">Custom Reports</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-users-gear"></i></span>
+                    Customer Management
+                </a>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                    <span class="nav-text">Loan / EMI / Advance Module</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Employee Loan Request</a></li>
+                    <li><a class="submenu-link">EMI Calculation</a></li>
+                    <li><a class="submenu-link">EMI Auto Deduction</a></li>
+                    <li><a class="submenu-link">Loan Balance Status</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                    Settings
+                </a>
+            </li>
+
+            <button id="logoutBtn" class="nav-link logout-btn-mob" type="button" title="Log out"
+                    aria-label="Log out">
+                <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                Logout
+            </button>
+        </ul>
+
+        <div class="user-profile">
+            <div class="user-avatar">AB</div>
+            <div class="user-info">
+                <h4>Abhinav B</h4>
+                <p>Admin • ID: #AD-2048</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+    <div class="header">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="page-title">
+            <h1>Welcome Abhinav B</h1>
+        </div>
+
+        <div class="header-actions">
+            <button class="notification-btn" title="Notifications">
+                🔔
+                <span class="notification-badge">3</span>
+            </button>
+            <div class="current-date">Monday, Dec 1, 2025</div>
+            <button id="logoutBtnHeader" class="logout-btn" type="button">
+                <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                Logout
+            </button>
+        </div>
+    </div>
+
+    <div class="the_line"></div>
+
+    <div class="page-title">
+        <h3>Roles & Permissions</h3>
+        <p class="subtitle">
+            Manage organizational roles and define access levels for each module of the HR system.
+        </p>
+    </div>
+
+    <!-- FILTERS BAR -->
+    <div class="filters-container">
+        <div class="filters-left">
+            <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchRole" placeholder="Search by role, permission, module...">
+            </div>
+
+            <select id="filterType" class="filter-select">
+                <option value="">All Role Types</option>
+                <option value="System">System Role</option>
+                <option value="Department">Department Role</option>
+                <option value="Custom">Custom Role</option>
+            </select>
+
+            <select id="filterAccess" class="filter-select">
+                <option value="">All Access Levels</option>
+                <option value="Full Access">Full Access</option>
+                <option value="Read Only">Read Only</option>
+                <option value="Limited Access">Limited Access</option>
+            </select>
+        </div>
+
+        <div class="filters-right">
+            <button class="btn btn-ghost" id="clearRoleFilters">
+                <i class="fa-solid fa-filter-circle-xmark"></i>
+                Clear Filters
+            </button>
+            <a href="add_role.html">
+            <button class="btn btn-primary" id="addRoleBtn">
+                <i class="fa-solid fa-plus"></i>
+                Add Role
+            </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- ROLES TABLE -->
+    <div class="table-container">
+        <div class="table-header-bar">
+            <h4>Roles & Permissions
+                <span class="badge-pill" id="roleCountBadge">Total: 5</span>
+            </h4>
+            <small>View all roles and their assigned permissions.</small>
+        </div>
+
+        <div class="data-table-wrapper">
+            <table class="data-table" id="roleTable">
+                <thead>
+                <tr>
+                    <th>Role Name</th>
+                    <th>Type</th>
+                    <th>Assigned Users</th>
+                    <th>Access Level</th>
+                    <th>Key Permissions</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <!-- SAMPLE ROLES -->
+                <tr data-type="System" data-access="Full Access">
+                    <td><strong>Administrator</strong></td>
+                    <td>System Role</td>
+                    <td>12 Users</td>
+                    <td><span class="status-pill status-onbudget">Full Access</span></td>
+                    <td>All Modules, Full Control</td>
+                    <td>
+                        <div class="table-actions">
+                            <button class="icon-btn view" title="View Role"><i class="fa-solid fa-eye"></i></button>
+                            <button class="icon-btn edit" title="Edit Role"><i class="fa-solid fa-pen"></i></button>
+                            <button class="icon-btn delete" title="Delete Role"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr data-type="System" data-access="Limited Access">
+                    <td><strong>HR Manager</strong></td>
+                    <td>System Role</td>
+                    <td>5 Users</td>
+                    <td><span class="status-pill status-underutilized">Limited Access</span></td>
+                    <td>Employees, HR, Attendance, Payroll</td>
+                    <td>
+                        <div class="table-actions">
+                            <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                            <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                            <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr data-type="Department" data-access="Read Only">
+                    <td><strong>Finance Viewer</strong></td>
+                    <td>Department Role</td>
+                    <td>7 Users</td>
+                    <td><span class="status-pill status-underutilized">Read Only</span></td>
+                    <td>Finance, Reports</td>
+                    <td>
+                        <div class="table-actions">
+                            <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                            <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                            <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr data-type="Custom" data-access="Limited Access">
+                    <td><strong>Project Supervisor</strong></td>
+                    <td>Custom Role</td>
+                    <td>3 Users</td>
+                    <td><span class="status-pill status-underutilized">Limited Access</span></td>
+                    <td>Projects, Tasks, Attendance</td>
+                    <td>
+                        <div class="table-actions">
+                            <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                            <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                            <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr data-type="Custom" data-access="Full Access">
+                    <td><strong>Branch Manager</strong></td>
+                    <td>Custom Role</td>
+                    <td>4 Users</td>
+                    <td><span class="status-pill status-onbudget">Full Access</span></td>
+                    <td>Employees, Attendance, Payroll, Reports</td>
+                    <td>
+                        <div class="table-actions">
+                            <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                            <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                            <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-footer">
+            <div id="roleTableInfo">Showing 1 to 5 of 5 roles</div>
+            <div class="pagination">
+                <button disabled><i class="fa-solid fa-angle-left"></i></button>
+                <button class="active-page">1</button>
+                <button disabled>2</button>
+                <button disabled><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+    </div>
+</main>
+
+</div>
+
+<div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true"></div>
+
+<script>
+    const searchRole = document.getElementById("searchRole");
+    const filterType = document.getElementById("filterType");
+    const filterAccess = document.getElementById("filterAccess");
+    const clearRoleFilters = document.getElementById("clearRoleFilters");
+    const roleTable = document.getElementById("roleTable");
+    const roleCountBadge = document.getElementById("roleCountBadge");
+    const roleTableInfo = document.getElementById("roleTableInfo");
+
+    function filterRoles() {
+        const rows = roleTable.querySelectorAll("tbody tr");
+        const search = searchRole.value.toLowerCase();
+        const type = filterType.value;
+        const access = filterAccess.value;
+
+        let visible = 0;
+
+        rows.forEach(row => {
+            const matchesSearch = row.textContent.toLowerCase().includes(search);
+            const matchesType = !type || row.dataset.type === type;
+            const matchesAcc = !access || row.dataset.access === access;
+
+            if (matchesSearch && matchesType && matchesAcc) {
+                row.style.display = "";
+                visible++;
+            } else {
+                row.style.display = "none";
+            }
+        });
+
+        roleCountBadge.textContent = "Total: " + visible;
+        roleTableInfo.textContent = `Showing 1 to ${visible} of ${rows.length} roles`;
+    }
+
+    searchRole.addEventListener("input", filterRoles);
+    filterType.addEventListener("change", filterRoles);
+    filterAccess.addEventListener("change", filterRoles);
+
+    clearRoleFilters.addEventListener("click", () => {
+        searchRole.value = "";
+        filterType.value = "";
+        filterAccess.value = "";
+        filterRoles();
+    });
+
+    filterRoles();
+</script>
+
+</body>
+</html>

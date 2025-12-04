@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>HR Dashboard - Organization Policies</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+<div class="container">
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">ABC</div>
+                <div class="logo-text">ABC Technologies</div>
+            </a>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
+                    <span class="nav-text">Employees</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a href="employee_master.html" class="submenu-link">Employee Master Data</a></li>
+                    <li><a href="employee_contact_personal_info.html" class="submenu-link">Contact & Personal Info</a></li>
+                    <li><a href="employment_history.html" class="submenu-link">Employment History</a></li>
+                    <li><a href="visa_pro_work.html" class="submenu-link">Visa and Pro Work</a></li>
+                </ul>
+            </li>
+
+            <!-- Organization (active) -->
+            <li class="nav-item nav-has-submenu open">
+                <button class="nav-toggle" aria-expanded="true">
+                    <span class="nav-icon"><i class="fa-solid fa-building"></i></span>
+                    <span class="nav-text">Organization</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="false">
+                    <li><a href="department_and_cost_ceneters.html" class="submenu-link">Departments & Cost Centers</a></li>
+                    <li><a href="roles_and_permissions_listing.html" class="submenu-link">Roles & Permissions</a></li>
+                    <li><a href="policies_listing.html" class="submenu-link active-submenu">Policies</a></li>
+                    <li><a class="submenu-link">Company Rules</a></li>
+                    <li><a class="submenu-link">Compliance Documentation</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-user-tie"></i></span>
+                    <span class="nav-text">Recruitment & ATS</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Job Management</a></li>
+                    <li><a class="submenu-link">Candidate Management</a></li>
+                    <li><a class="submenu-link">Interview Management</a></li>
+                    <li><a class="submenu-link">Offer & Hiring</a></li>
+                    <li><a class="submenu-link">Onboarding</a></li>
+                    <li><a class="submenu-link">Offboarding</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-clock"></i></span>
+                    <span class="nav-text">Attendance</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Attendance</a></li>
+                    <li><a class="submenu-link">Leave</a></li>
+                    <li><a class="submenu-link">Timesheets</a></li>
+                    <li><a class="submenu-link">Shift Management</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+                    <span class="nav-text">Payroll Management</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Payroll Setup</a></li>
+                    <li><a class="submenu-link">Payroll Processing</a></li>
+                    <li><a class="submenu-link">Payroll Output</a></li>
+                    <li><a class="submenu-link">Compliance</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span>
+                    <span class="nav-text">Performance & Appraisals</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Goal & KPI Management</a></li>
+                    <li><a class="submenu-link">Assessment</a></li>
+                    <li><a class="submenu-link">Appraisal Cycles</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <span class="nav-text">Learning & Development</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Training Management</a></li>
+                    <li><a class="submenu-link">e-Learning</a></li>
+                    <li><a class="submenu-link">Skill Development</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-heart"></i></span>
+                    <span class="nav-text">Employee Engagement</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Surveys & Feedback</a></li>
+                    <li><a class="submenu-link">Recognition</a></li>
+                    <li><a class="submenu-link">Communication</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-sitemap"></i></span>
+                    <span class="nav-text">Talent & Succession Planning</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Competency Framework</a></li>
+                    <li><a class="submenu-link">Succession Planning</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-gift"></i></span>
+                    <span class="nav-text">Benefits & Compensation</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Health & Insurance Plans</a></li>
+                    <li><a class="submenu-link">Allowance Policies</a></li>
+                    <li><a class="submenu-link">Bonus Planning</a></li>
+                    <li><a class="submenu-link">Increment Budgeting</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                    <span class="nav-text">Expense</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Expense Category</a></li>
+                    <li><a class="submenu-link">Expenses</a></li>
+                    <li><a class="submenu-link">Expense Claims</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-boxes-stacked"></i></span>
+                    <span class="nav-text">Asset Management</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Fixed Assets</a></li>
+                    <li><a class="submenu-link">Depreciation</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-bar"></i></span>
+                    <span class="nav-text">Reporting & Analytics</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Attendance Reports</a></li>
+                    <li><a class="submenu-link">Leave Trends</a></li>
+                    <li><a class="submenu-link">Payroll Summary</a></li>
+                    <li><a class="submenu-link">Employee Analytics</a></li>
+                    <li><a class="submenu-link">Custom Reports</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-users-gear"></i></span>
+                    Customer Management
+                </a>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                    <span class="nav-text">Loan / EMI / Advance Module</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Employee Loan Request</a></li>
+                    <li><a class="submenu-link">EMI Calculation</a></li>
+                    <li><a class="submenu-link">EMI Auto Deduction</a></li>
+                    <li><a class="submenu-link">Loan Balance Status</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                    Settings
+                </a>
+            </li>
+
+            <button id="logoutBtn" class="nav-link logout-btn-mob" type="button" title="Log out"
+                    aria-label="Log out">
+                <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                Logout
+            </button>
+        </ul>
+
+        <div class="user-profile">
+            <div class="user-avatar">AB</div>
+            <div class="user-info">
+                <h4>Abhinav B</h4>
+                <p>Admin • ID: #AD-2048</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="header">
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="page-title">
+                <h1>Welcome Abhinav B</h1>
+            </div>
+
+            <div class="header-actions">
+                <button class="notification-btn" title="Notifications">
+                    🔔
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="current-date">Monday, Dec 1, 2025</div>
+                <button id="logoutBtnHeader" class="logout-btn" type="button">
+                    <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <div class="the_line"></div>
+
+        <div class="page-title">
+            <h3>Organization Policies</h3>
+            <p class="subtitle">
+                Central repository for all company policies with tracking of versions, status and applicability.
+            </p>
+        </div>
+
+        <!-- FILTERS BAR -->
+        <div class="filters-container">
+            <div class="filters-left">
+                <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchPolicy"
+                           placeholder="Search by policy name">
+                </div>
+
+                <select id="filterCategory" class="filter-select">
+                    <option value="">All Categories</option>
+                    <option value="HR & People">HR &amp; People</option>
+                    <option value="Leave & Attendance">Leave &amp; Attendance</option>
+                    <option value="Payroll & Compensation">Payroll &amp; Compensation</option>
+                    <option value="IT & Security">IT &amp; Security</option>
+                    <option value="Code of Conduct">Code of Conduct</option>
+                    <option value="Health & Safety">Health &amp; Safety</option>
+                </select>
+
+                <select id="filterAudience" class="filter-select">
+                    <option value="">All Audiences</option>
+                    <option value="All Employees">All Employees</option>
+                    <option value="Managers Only">Managers Only</option>
+                    <option value="HR & Admin">HR &amp; Admin</option>
+                    <option value="Finance & Payroll">Finance &amp; Payroll</option>
+                </select>
+
+                <select id="filterStatus" class="filter-select">
+                    <option value="">All Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Draft">Draft</option>
+                    <option value="Archived">Archived</option>
+                </select>
+            </div>
+
+            <div class="filters-right">
+                <button class="btn btn-ghost" id="clearPolicyFilters">
+                    <i class="fa-solid fa-filter-circle-xmark"></i>
+                    Clear Filters
+                </button>
+                <a href="add_policy.html" class="btn btn-primary" id="addPolicyBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Policy
+                </a>
+            </div>
+        </div>
+
+        <!-- POLICIES TABLE -->
+        <div class="table-container">
+            <div class="table-header-bar">
+                <h4>Policies
+                    <span class="badge-pill" id="policyCountBadge">Total: 6</span>
+                </h4>
+                <small>Overview of all active, draft and archived company policies.</small>
+            </div>
+
+            <div class="data-table-wrapper">
+                <table class="data-table" id="policyTable">
+                    <thead>
+                    <tr>
+                        <th>Policy Name</th>
+                        <th>Category</th>
+                        <th>Applies To</th>
+                        <th>Owner</th>
+                        <th>Last Updated</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- SAMPLE POLICIES -->
+
+                    <tr data-category="Code of Conduct"
+                        data-audience="All Employees"
+                        data-status="Active">
+                        <td>
+                            <div class="emp-name">Code of Conduct</div>
+                        </td>
+                        <td>Code of Conduct</td>
+                        <td>All Employees</td>
+                        <td>HR &amp; Legal</td>
+                        <td>15 Oct 2025</td>
+                        <td><span class="status-pill status-active">Active</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Policy">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Policy">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Archive Policy">
+                                    <i class="fa-solid fa-box-archive"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-category="Leave & Attendance"
+                        data-audience="All Employees"
+                        data-status="Active">
+                        <td>
+                            <div class="emp-name">Leave & Attendance Policy</div>
+                        </td>
+                        <td>Leave &amp; Attendance</td>
+                        <td>All Employees</td>
+                        <td>HR</td>
+                        <td>01 Sep 2025</td>
+                        <td><span class="status-pill status-active">Active</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Policy">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Policy">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Archive Policy">
+                                    <i class="fa-solid fa-box-archive"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-category="Payroll & Compensation"
+                        data-audience="Finance & Payroll"
+                        data-status="Active">
+                        <td>
+                            <div class="emp-name">Payroll Processing & Cut-off Policy</div>
+                        </td>
+                        <td>Payroll &amp; Compensation</td>
+                        <td>Finance &amp; Payroll</td>
+                        <td>Finance</td>
+                        <td>22 Aug 2025</td>
+                        <td><span class="status-pill status-active">Active</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Policy">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Policy">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Archive Policy">
+                                    <i class="fa-solid fa-box-archive"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-category="IT & Security"
+                        data-audience="All Employees"
+                        data-status="Draft">
+                        <td>
+                            <div class="emp-name">IT Usage & Data Security Policy</div>
+                        </td>
+                        <td>IT &amp; Security</td>
+                        <td>All Employees</td>
+                        <td>IT &amp; Security</td>
+                        <td>10 Nov 2025</td>
+                        <td><span class="status-pill status-draft">Draft</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Policy">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Policy">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Draft">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-category="Health & Safety"
+                        data-audience="All Employees"
+                        data-status="Active">
+                        <td>
+                            <div class="emp-name">Workplace Health & Safety Policy</div>
+                        </td>
+                        <td>Health &amp; Safety</td>
+                        <td>All Employees</td>
+                        <td>Admin</td>
+                        <td>30 Jul 2025</td>
+                        <td><span class="status-pill status-active">Active</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Policy">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Policy">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Archive Policy">
+                                    <i class="fa-solid fa-box-archive"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <div id="policyTableInfo">Showing 1 to 6 of 6 policies</div>
+                <div class="pagination">
+                    <button disabled title="Previous page">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="active-page">1</button>
+                    <button disabled>2</button>
+                    <button disabled title="Next page">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true"></div>
+
+<script>
+    // Sidebar & nav behaviour (same pattern as your other pages)
+    (function () {
+        const sidebarEl = document.getElementById('sidebar');
+        const menuBtn = document.getElementById('menuBtn');
+        const overlay = document.getElementById('sidebarOverlay');
+
+        const toggles = document.querySelectorAll('.nav-toggle');
+        toggles.forEach(btn => {
+            const li = btn.closest('.nav-has-submenu');
+            const submenu = li.querySelector('.submenu');
+
+            btn.addEventListener('click', () => {
+                const isOpen = li.classList.toggle('open');
+                btn.setAttribute('aria-expanded', String(isOpen));
+                submenu.setAttribute('aria-hidden', String(!isOpen));
+
+                document.querySelectorAll('.nav-has-submenu').forEach(other => {
+                    if (other !== li && other.classList.contains('open')) {
+                        other.classList.remove('open');
+                        const otherBtn = other.querySelector('.nav-toggle');
+                        const otherSub = other.querySelector('.submenu');
+                        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                        if (otherSub) otherSub.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            });
+
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                    e.preventDefault();
+                    btn.click();
+                }
+            });
+        });
+
+        function openMobileSidebar() {
+            sidebarEl.classList.add('mobile-open', 'mobile-visible');
+            overlay.classList.add('show');
+            overlay.setAttribute('aria-hidden', 'false');
+            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMobileSidebar() {
+            sidebarEl.classList.remove('mobile-open', 'mobile-visible');
+            overlay.classList.remove('show');
+            overlay.setAttribute('aria-hidden', 'true');
+            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        function handleResize() {
+            if (window.innerWidth <= 900) {
+                if (!sidebarEl.classList.contains('mobile-visible')) {
+                    sidebarEl.style.transform = 'translateX(-110%)';
+                } else {
+                    sidebarEl.style.transform = 'translateX(0)';
+                }
+                sidebarEl.style.position = 'fixed';
+                sidebarEl.style.height = '100vh';
+                sidebarEl.style.top = '0';
+                sidebarEl.style.left = '0';
+                sidebarEl.style.zIndex = '40';
+            } else {
+                sidebarEl.style.transform = '';
+                sidebarEl.style.position = '';
+                sidebarEl.style.height = '';
+                sidebarEl.style.top = '';
+                sidebarEl.style.left = '';
+                sidebarEl.style.zIndex = '';
+                overlay.classList.remove('show');
+                overlay.setAttribute('aria-hidden', 'true');
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+                sidebarEl.classList.remove('mobile-visible');
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                if (expanded) {
+                    closeMobileSidebar();
+                } else {
+                    openMobileSidebar();
+                }
+            });
+        }
+
+        overlay.addEventListener('click', () => {
+            closeMobileSidebar();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' || e.key === 'Esc') {
+                if (overlay.classList.contains('show')) {
+                    closeMobileSidebar();
+                }
+            }
+        });
+    })();
+
+    // Policies filters
+    const searchPolicy = document.getElementById('searchPolicy');
+    const filterCategory = document.getElementById('filterCategory');
+    const filterAudience = document.getElementById('filterAudience');
+    const filterStatus = document.getElementById('filterStatus');
+    const clearPolicyFilters = document.getElementById('clearPolicyFilters');
+    const policyTable = document.getElementById('policyTable');
+    const policyCountBadge = document.getElementById('policyCountBadge');
+    const policyTableInfo = document.getElementById('policyTableInfo');
+
+    function filterPolicies() {
+        const rows = policyTable.querySelectorAll('tbody tr');
+        const search = searchPolicy.value.toLowerCase();
+        const category = filterCategory.value;
+        const audience = filterAudience.value;
+        const status = filterStatus.value;
+
+        let visible = 0;
+
+        rows.forEach(row => {
+            const rowText = row.textContent.toLowerCase();
+            const rowCategory = row.getAttribute('data-category');
+            const rowAudience = row.getAttribute('data-audience');
+            const rowStatus = row.getAttribute('data-status');
+
+            const matchesSearch = !search || rowText.includes(search);
+            const matchesCategory = !category || rowCategory === category;
+            const matchesAudience = !audience || rowAudience === audience;
+            const matchesStatus = !status || rowStatus === status;
+
+            if (matchesSearch && matchesCategory && matchesAudience && matchesStatus) {
+                row.style.display = '';
+                visible++;
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        policyCountBadge.textContent = 'Total: ' + visible;
+        policyTableInfo.textContent = `Showing 1 to ${visible} of ${policyTable.querySelectorAll('tbody tr').length} policies`;
+    }
+
+    if (searchPolicy) searchPolicy.addEventListener('input', filterPolicies);
+    if (filterCategory) filterCategory.addEventListener('change', filterPolicies);
+    if (filterAudience) filterAudience.addEventListener('change', filterPolicies);
+    if (filterStatus) filterStatus.addEventListener('change', filterPolicies);
+
+    if (clearPolicyFilters) {
+        clearPolicyFilters.addEventListener('click', () => {
+            searchPolicy.value = '';
+            filterCategory.value = '';
+            filterAudience.value = '';
+            filterStatus.value = '';
+            filterPolicies();
+        });
+    }
+
+    // Initial filter state
+    filterPolicies();
+</script>
+
+</body>
+</html>

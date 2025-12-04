@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>HR Dashboard - Employee Employment History</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="static/style.css">
+   
+</head>
+
+<body>
+<div class="container">
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">ABC</div>
+                <div class="logo-text">ABC Technologies</div>
+            </a>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="nav-item nav-has-submenu open">
+                <button class="nav-toggle" aria-expanded="true">
+                    <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
+                    <span class="nav-text">Employees</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="false">
+                    <li><a href="employee_master.html" class="submenu-link">Employee Master Data</a></li>
+                    <li><a href="employee_contact_personal_info.html" class="submenu-link">Contact & Personal Info</a></li>
+                    <li><a href="employment_history.html" class="submenu-link active-submenu">Employment History</a></li>
+                    <li><a href="visa_pro_work.html" class="submenu-link">Visa and Pro Work</a></li>
+                </ul>
+            </li>
+
+            <!-- Remaining sidebar exactly as your original (shortened for brevity) -->
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-building"></i></span>
+                    <span class="nav-text">Organization</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a href="department_and_cost_ceneters.html" class="submenu-link">Departments & Cost Centers</a></li>
+                    <li><a href="roles_and_permissions_listing.html" class="submenu-link">Roles & Permissions</a></li>
+                    <li><a href="policies_listing.html" class="submenu-link">Policies</a></li>
+                    <li><a class="submenu-link">Company Rules</a></li>
+                    <li><a class="submenu-link">Compliance Documentation</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-user-tie"></i></span>
+                        <span class="nav-text">Recruitment & ATS</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Job Management</a></li>
+                        <li><a class="submenu-link">Candidate Management</a></li>
+                        <li><a class="submenu-link">Interview Management</a></li>
+                        <li><a class="submenu-link">Offer & Hiring</a></li>
+                        <li><a class="submenu-link">Onboarding</a></li>
+                        <li><a class="submenu-link">Offboarding</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-clock"></i></span>
+                        <span class="nav-text">Attendance</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Attendance</a></li>
+                        <li><a class="submenu-link">Leave</a></li>
+                        <li><a class="submenu-link">Timesheets</a></li>
+                        <li><a class="submenu-link">Shift Management</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+                        <span class="nav-text">Payroll Management</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Payroll Setup</a></li>
+                        <li><a class="submenu-link">Payroll Processing</a></li>
+                        <li><a class="submenu-link">Payroll Output</a></li>
+                        <li><a class="submenu-link">Compliance</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span>
+                        <span class="nav-text">Performance & Appraisals</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Goal & KPI Management</a></li>
+                        <li><a class="submenu-link">Assessment</a></li>
+                        <li><a class="submenu-link">Appraisal Cycles</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <span class="nav-text">Learning & Development</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Training Management</a></li>
+                        <li><a class="submenu-link">e-Learning</a></li>
+                        <li><a class="submenu-link">Skill Development</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-heart"></i></span>
+                        <span class="nav-text">Employee Engagement</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Surveys & Feedback</a></li>
+                        <li><a class="submenu-link">Recognition</a></li>
+                        <li><a class="submenu-link">Communication</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-sitemap"></i></span>
+                        <span class="nav-text">Talent & Succession Planning</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Competency Framework</a></li>
+                        <li><a class="submenu-link">Succession Planning</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-gift"></i></span>
+                        <span class="nav-text">Benefits & Compensation</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Health & Insurance Plans</a></li>
+                        <li><a class="submenu-link">Allowance Policies</a></li>
+                        <li><a class="submenu-link">Bonus Planning</a></li>
+                        <li><a class="submenu-link">Increment Budgeting</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                        <span class="nav-text">Expense</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Expense Category</a></li>
+                        <li><a class="submenu-link">Expenses</a></li>
+                        <li><a class="submenu-link">Expense Claims</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-boxes-stacked"></i></span>
+                        <span class="nav-text">Asset Management</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Fixed Assets</a></li>
+                        <li><a class="submenu-link">Depreciation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-bar"></i></span>
+                        <span class="nav-text">Reporting & Analytics</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Attendance Reports</a></li>
+                        <li><a class="submenu-link">Leave Trends</a></li>
+                        <li><a class="submenu-link">Payroll Summary</a></li>
+                        <li><a class="submenu-link">Employee Analytics</a></li>
+                        <li><a class="submenu-link">Custom Reports</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-users-gear"></i></span>
+                        Customer Management
+                    </a>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                        <span class="nav-text">Loan / EMI / Advance Module</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a class="submenu-link">Employee Loan Request</a></li>
+                        <li><a class="submenu-link">EMI Calculation</a></li>
+                        <li><a class="submenu-link">EMI Auto Deduction</a></li>
+                        <li><a class="submenu-link">Loan Balance Status</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                        Settings
+                    </a>
+                </li>
+
+                <button id="logoutBtn" class="nav-link logout-btn-mob" type="button" title="Log out"
+                    aria-label="Log out">
+                    <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                    Logout
+                </button>
+        </ul>
+
+        <div class="user-profile">
+            <div class="user-avatar">AB</div>
+            <div class="user-info">
+                <h4>Abhinav B</h4>
+                <p>Admin • ID: #AD-2048</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="header">
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="page-title">
+                <h1>Welcome Abhinav B</h1>
+            </div>
+
+            <div class="header-actions">
+                <button class="notification-btn" title="Notifications">
+                    🔔
+                    <span class="notification-badge">2</span>
+                </button>
+                <div class="current-date">Monday, Dec 1, 2025</div>
+                <button id="logoutBtnHeader" class="logout-btn" type="button" title="Log out" aria-label="Log out">
+                    <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <div class="the_line"></div>
+
+        <div class="page-title">
+            <h3>Employee Employment History</h3>
+            <p class="subtitle">
+                View and manage employment history including join dates, roles, managers and exit details.
+            </p>
+        </div>
+
+        <!-- FILTERS BAR -->
+        <div class="filters-container">
+            <div class="filters-left">
+                <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search by name, ID, designation...">
+                </div>
+
+                <select id="filterDepartment" class="filter-select">
+                    <option value="">All Departments</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Finance">Finance</option>
+                </select>
+
+                <select id="filterType" class="filter-select">
+                    <option value="">All Employment Types</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                    <option value="Contract">Contract</option>
+                    <option value="Intern">Intern</option>
+                </select>
+
+                <select id="filterStatus" class="filter-select">
+                    <option value="">All Status</option>
+                    <option value="Active">Active</option>
+                    <option value="On Notice">On Notice</option>
+                    <option value="Resigned">Resigned</option>
+                    <option value="Terminated">Terminated</option>
+                </select>
+            </div>
+
+            <div class="filters-right">
+                <button class="btn btn-ghost" id="clearFiltersBtn">
+                    <i class="fa-solid fa-filter-circle-xmark"></i>
+                    Clear Filters
+                </button>
+                <button class="btn btn-primary" id="addEmploymentBtn">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Add Employee
+                </button>
+            </div>
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-container">
+            <div class="table-header-bar">
+                <h4>Employment History
+                    <span class="badge-pill" id="employeeCountBadge">Total: 8</span>
+                </h4>
+                <small>Past and current employment records of employees.</small>
+            </div>
+
+            <div class="data-table-wrapper">
+                <table class="data-table" id="employeeTable">
+                    <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Employee</th>
+                        <th>Employment Type</th>
+                        <th>Joining Date</th>
+                        <th>Confirmation Date</th>
+                        <th>Last Working Date</th>
+                        <th>Reporting Manager</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- SAMPLE ROWS -->
+                    <tr data-department="Engineering" data-type="Full-time" data-status="Active">
+                        <td>#EMP-1001</td>
+                        <td>
+                            <div class="emp-name">John Smith</div>
+                            <div class="emp-sub">Senior Software Engineer • Engineering</div>
+                        </td>
+                        <td>Full-time</td>
+                        <td>2019-03-15</td>
+                        <td>2019-09-15</td>
+                        <td>—</td>
+                        <td>
+                            <div>Alice Brown</div>
+                            <div class="contact-sub">Engineering Manager</div>
+                        </td>
+                        <td><span style="color: var(--success); font-weight: 600;">Active</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Employment">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Employment Record">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-department="Marketing" data-type="Full-time" data-status="On Notice">
+                        <td>#EMP-1002</td>
+                        <td>
+                            <div class="emp-name">Sarah Johnson</div>
+                            <div class="emp-sub">Marketing Specialist • Marketing</div>
+                        </td>
+                        <td>Full-time</td>
+                        <td>2021-01-10</td>
+                        <td>2021-07-10</td>
+                        <td>2025-02-28</td>
+                        <td>
+                            <div>Kevin White</div>
+                            <div class="contact-sub">Marketing Lead</div>
+                        </td>
+                        <td><span style="color:#c27c0e;font-weight:600;">On Notice</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Employment">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Employment Record">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-department="HR" data-type="Full-time" data-status="Active">
+                        <td>#EMP-1003</td>
+                        <td>
+                            <div class="emp-name">Mike Davis</div>
+                            <div class="emp-sub">HR Manager • HR</div>
+                        </td>
+                        <td>Full-time</td>
+                        <td>2018-06-01</td>
+                        <td>2018-12-01</td>
+                        <td>—</td>
+                        <td>
+                            <div>CEO</div>
+                            <div class="contact-sub">Direct Report</div>
+                        </td>
+                        <td><span style="color: var(--success); font-weight: 600;">Active</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Employment">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Employment Record">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-department="Sales" data-type="Contract" data-status="Resigned">
+                        <td>#EMP-1004</td>
+                        <td>
+                            <div class="emp-name">Emily Carter</div>
+                            <div class="emp-sub">Account Executive • Sales</div>
+                        </td>
+                        <td>Contract</td>
+                        <td>2020-09-01</td>
+                        <td>—</td>
+                        <td>2023-08-31</td>
+                        <td>
+                            <div>Robert King</div>
+                            <div class="contact-sub">Sales Manager</div>
+                        </td>
+                        <td><span style="color:#6b7280;font-weight:600;">Resigned</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Employment">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Employment Record">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-department="Engineering" data-type="Remote" data-status="Active">
+                        <td>#EMP-1005</td>
+                        <td>
+                            <div class="emp-name">Rahul Sharma</div>
+                            <div class="emp-sub">DevOps Engineer • Engineering</div>
+                        </td>
+                        <td>Full-time</td>
+                        <td>2022-04-01</td>
+                        <td>2022-10-01</td>
+                        <td>—</td>
+                        <td>
+                            <div>John Smith</div>
+                            <div class="contact-sub">Tech Lead</div>
+                        </td>
+                        <td><span style="color: var(--success); font-weight: 600;">Active</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Employment">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Employment Record">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-department="Finance" data-type="Full-time" data-status="Active">
+                        <td>#EMP-1006</td>
+                        <td>
+                            <div class="emp-name">Oliver Brown</div>
+                            <div class="emp-sub">Financial Analyst • Finance</div>
+                        </td>
+                        <td>Full-time</td>
+                        <td>2020-01-20</td>
+                        <td>2020-07-20</td>
+                        <td>—</td>
+                        <td>
+                            <div>Maria Gomez</div>
+                            <div class="contact-sub">Finance Manager</div>
+                        </td>
+                        <td><span style="color: var(--success); font-weight: 600;">Active</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Employment">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Employment Record">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-department="Sales" data-type="Intern" data-status="Terminated">
+                        <td>#EMP-1007</td>
+                        <td>
+                            <div class="emp-name">Sophia Lee</div>
+                            <div class="emp-sub">Sales Intern • Sales</div>
+                        </td>
+                        <td>Intern</td>
+                        <td>2023-06-01</td>
+                        <td>—</td>
+                        <td>2023-08-15</td>
+                        <td>
+                            <div>Emily Carter</div>
+                            <div class="contact-sub">Account Executive</div>
+                        </td>
+                        <td><span style="color: var(--danger); font-weight: 600;">Terminated</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Employment">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Employment Record">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-department="HR" data-type="Part-time" data-status="Active">
+                        <td>#EMP-1008</td>
+                        <td>
+                            <div class="emp-name">Priya Nair</div>
+                            <div class="emp-sub">HR Executive • HR</div>
+                        </td>
+                        <td>Part-time</td>
+                        <td>2024-02-01</td>
+                        <td>2024-08-01</td>
+                        <td>—</td>
+                        <td>
+                            <div>Mike Davis</div>
+                            <div class="contact-sub">HR Manager</div>
+                        </td>
+                        <td><span style="color: var(--success); font-weight: 600;">Active</span></td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Employment">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Employment Record">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <div id="tableInfo">Showing 1 to 8 of 8 records</div>
+                <div class="pagination">
+                    <button disabled title="Previous page">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="active-page">1</button>
+                    <button disabled>2</button>
+                    <button disabled title="Next page">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true"></div>
+
+<script>
+    (function () {
+        const sidebarEl = document.getElementById('sidebar');
+        const menuBtn = document.getElementById('menuBtn');
+        const overlay = document.getElementById('sidebarOverlay');
+
+        const toggles = document.querySelectorAll('.nav-toggle');
+        toggles.forEach(btn => {
+            const li = btn.closest('.nav-has-submenu');
+            const submenu = li.querySelector('.submenu');
+
+            btn.addEventListener('click', () => {
+                const isOpen = li.classList.toggle('open');
+                btn.setAttribute('aria-expanded', String(isOpen));
+                submenu.setAttribute('aria-hidden', String(!isOpen));
+
+                document.querySelectorAll('.nav-has-submenu').forEach(other => {
+                    if (other !== li && other.classList.contains('open')) {
+                        other.classList.remove('open');
+                        const otherBtn = other.querySelector('.nav-toggle');
+                        const otherSub = other.querySelector('.submenu');
+                        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                        if (otherSub) otherSub.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            });
+
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                    e.preventDefault();
+                    btn.click();
+                }
+            });
+        });
+
+        function openMobileSidebar() {
+            sidebarEl.classList.add('mobile-open', 'mobile-visible');
+            overlay.classList.add('show');
+            overlay.setAttribute('aria-hidden', 'false');
+            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMobileSidebar() {
+            sidebarEl.classList.remove('mobile-open', 'mobile-visible');
+            overlay.classList.remove('show');
+            overlay.setAttribute('aria-hidden', 'true');
+            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        function handleResize() {
+            if (window.innerWidth <= 900) {
+                if (!sidebarEl.classList.contains('mobile-visible')) {
+                    sidebarEl.style.transform = 'translateX(-110%)';
+                } else {
+                    sidebarEl.style.transform = 'translateX(0)';
+                }
+                sidebarEl.style.position = 'fixed';
+                sidebarEl.style.height = '100vh';
+                sidebarEl.style.top = '0';
+                sidebarEl.style.left = '0';
+                sidebarEl.style.zIndex = '40';
+            } else {
+                sidebarEl.style.transform = '';
+                sidebarEl.style.position = '';
+                sidebarEl.style.height = '';
+                sidebarEl.style.top = '';
+                sidebarEl.style.left = '';
+                sidebarEl.style.zIndex = '';
+                overlay.classList.remove('show');
+                overlay.setAttribute('aria-hidden', 'true');
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+                sidebarEl.classList.remove('mobile-visible');
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                if (expanded) {
+                    closeMobileSidebar();
+                } else {
+                    openMobileSidebar();
+                }
+            });
+        }
+
+        overlay.addEventListener('click', () => {
+            closeMobileSidebar();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' || e.key === 'Esc') {
+                if (overlay.classList.contains('show')) {
+                    closeMobileSidebar();
+                }
+            }
+        });
+    })();
+
+    // Employment History filters
+    const searchInput = document.getElementById('searchInput');
+    const filterDepartment = document.getElementById('filterDepartment');
+    const filterType = document.getElementById('filterType');
+    const filterStatus = document.getElementById('filterStatus');
+    const employeeTable = document.getElementById('employeeTable');
+    const employeeCountBadge = document.getElementById('employeeCountBadge');
+    const tableInfo = document.getElementById('tableInfo');
+    const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+
+    function applyFilters() {
+        const rows = employeeTable.querySelectorAll('tbody tr');
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        const deptFilter = filterDepartment.value;
+        const typeFilter = filterType.value;
+        const statusFilter = filterStatus.value;
+
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+            const rowText = row.textContent.toLowerCase();
+            const rowDept = row.getAttribute('data-department');
+            const rowType = row.getAttribute('data-type');
+            const rowStatus = row.getAttribute('data-status');
+
+            const matchesSearch = !searchTerm || rowText.includes(searchTerm);
+            const matchesDept = !deptFilter || rowDept === deptFilter;
+            const matchesType = !typeFilter || rowType === typeFilter;
+            const matchesStatus = !statusFilter || rowStatus === statusFilter;
+
+            if (matchesSearch && matchesDept && matchesType && matchesStatus) {
+                row.style.display = '';
+                visibleCount++;
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        employeeCountBadge.textContent = 'Total: ' + visibleCount;
+        tableInfo.textContent = `Showing 1 to ${visibleCount} of ${employeeTable.querySelectorAll('tbody tr').length} records`;
+    }
+
+    if (searchInput) searchInput.addEventListener('input', applyFilters);
+    if (filterDepartment) filterDepartment.addEventListener('change', applyFilters);
+    if (filterType) filterType.addEventListener('change', applyFilters);
+    if (filterStatus) filterStatus.addEventListener('change', applyFilters);
+
+    if (clearFiltersBtn) {
+        clearFiltersBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            filterDepartment.value = '';
+            filterType.value = '';
+            filterStatus.value = '';
+            applyFilters();
+        });
+    }
+
+    const addEmploymentBtn = document.getElementById('addEmploymentBtn');
+    if (addEmploymentBtn) {
+        addEmploymentBtn.addEventListener('click', () => {
+            // Replace with your actual Employment History form page
+            window.location.href = 'add_employee.html';
+        });
+    }
+
+    // Initial count
+    applyFilters();
+</script>
+</body>
+</html>

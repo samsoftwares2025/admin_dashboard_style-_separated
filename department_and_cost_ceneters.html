@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>HR Dashboard - Departments & Cost Centers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="static/style.css">
+  
+</head>
+
+<body>
+<div class="container">
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">ABC</div>
+                <div class="logo-text">ABC Technologies</div>
+            </a>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
+                    <span class="nav-text">Employees</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a href="employee_master.html" class="submenu-link">Employee Master Data</a></li>
+                    <li><a href="employee_contact_personal_info.html" class="submenu-link">Contact & Personal Info</a></li>
+                    <li><a href="employment_history.html" class="submenu-link">Employment History</a></li>
+                    <li><a href="visa_pro_work.html" class="submenu-link">Visa and Pro Work</a></li>
+                </ul>
+            </li>
+
+            <!-- Organization (active) -->
+            <li class="nav-item nav-has-submenu open">
+                <button class="nav-toggle" aria-expanded="true">
+                    <span class="nav-icon"><i class="fa-solid fa-building"></i></span>
+                    <span class="nav-text">Organization</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="false">
+                    <li><a href="department_and_cost_ceneters.html" class="submenu-link active-submenu">Departments & Cost Centers</a></li>
+                    <li><a href="roles_and_permissions_listing.html" class="submenu-link">Roles & Permissions</a></li>
+                    <li><a href="policies_listing.html" class="submenu-link">Policies</a></li>
+                    <li><a class="submenu-link">Company Rules</a></li>
+                    <li><a class="submenu-link">Compliance Documentation</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-user-tie"></i></span>
+                    <span class="nav-text">Recruitment & ATS</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Job Management</a></li>
+                    <li><a class="submenu-link">Candidate Management</a></li>
+                    <li><a class="submenu-link">Interview Management</a></li>
+                    <li><a class="submenu-link">Offer & Hiring</a></li>
+                    <li><a class="submenu-link">Onboarding</a></li>
+                    <li><a class="submenu-link">Offboarding</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-clock"></i></span>
+                    <span class="nav-text">Attendance</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Attendance</a></li>
+                    <li><a class="submenu-link">Leave</a></li>
+                    <li><a class="submenu-link">Timesheets</a></li>
+                    <li><a class="submenu-link">Shift Management</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+                    <span class="nav-text">Payroll Management</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Payroll Setup</a></li>
+                    <li><a class="submenu-link">Payroll Processing</a></li>
+                    <li><a class="submenu-link">Payroll Output</a></li>
+                    <li><a class="submenu-link">Compliance</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span>
+                    <span class="nav-text">Performance & Appraisals</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Goal & KPI Management</a></li>
+                    <li><a class="submenu-link">Assessment</a></li>
+                    <li><a class="submenu-link">Appraisal Cycles</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <span class="nav-text">Learning & Development</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Training Management</a></li>
+                    <li><a class="submenu-link">e-Learning</a></li>
+                    <li><a class="submenu-link">Skill Development</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-heart"></i></span>
+                    <span class="nav-text">Employee Engagement</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Surveys & Feedback</a></li>
+                    <li><a class="submenu-link">Recognition</a></li>
+                    <li><a class="submenu-link">Communication</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-sitemap"></i></span>
+                    <span class="nav-text">Talent & Succession Planning</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Competency Framework</a></li>
+                    <li><a class="submenu-link">Succession Planning</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-gift"></i></span>
+                    <span class="nav-text">Benefits & Compensation</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Health & Insurance Plans</a></li>
+                    <li><a class="submenu-link">Allowance Policies</a></li>
+                    <li><a class="submenu-link">Bonus Planning</a></li>
+                    <li><a class="submenu-link">Increment Budgeting</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                    <span class="nav-text">Expense</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Expense Category</a></li>
+                    <li><a class="submenu-link">Expenses</a></li>
+                    <li><a class="submenu-link">Expense Claims</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-boxes-stacked"></i></span>
+                    <span class="nav-text">Asset Management</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Fixed Assets</a></li>
+                    <li><a class="submenu-link">Depreciation</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-bar"></i></span>
+                    <span class="nav-text">Reporting & Analytics</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Attendance Reports</a></li>
+                    <li><a class="submenu-link">Leave Trends</a></li>
+                    <li><a class="submenu-link">Payroll Summary</a></li>
+                    <li><a class="submenu-link">Employee Analytics</a></li>
+                    <li><a class="submenu-link">Custom Reports</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-users-gear"></i></span>
+                    Customer Management
+                </a>
+            </li>
+
+            <li class="nav-item nav-has-submenu">
+                <button class="nav-toggle">
+                    <span class="nav-icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                    <span class="nav-text">Loan / EMI / Advance Module</span>
+                    <span class="nav-caret">▸</span>
+                </button>
+                <ul class="submenu" aria-hidden="true">
+                    <li><a class="submenu-link">Employee Loan Request</a></li>
+                    <li><a class="submenu-link">EMI Calculation</a></li>
+                    <li><a class="submenu-link">EMI Auto Deduction</a></li>
+                    <li><a class="submenu-link">Loan Balance Status</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                    Settings
+                </a>
+            </li>
+
+            <button id="logoutBtn" class="nav-link logout-btn-mob" type="button" title="Log out"
+                    aria-label="Log out">
+                <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                Logout
+            </button>
+        </ul>
+
+        <div class="user-profile">
+            <div class="user-avatar">AB</div>
+            <div class="user-info">
+                <h4>Abhinav B</h4>
+                <p>Admin • ID: #AD-2048</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="header">
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="page-title">
+                <h1>Welcome Abhinav B</h1>
+            </div>
+
+            <div class="header-actions">
+                <button class="notification-btn" title="Notifications">
+                    🔔
+                    <span class="notification-badge">2</span>
+                </button>
+                <div class="current-date">Monday, Dec 1, 2025</div>
+                <button id="logoutBtnHeader" class="logout-btn" type="button" title="Log out" aria-label="Log out">
+                    <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <div class="the_line"></div>
+
+        <div class="page-title">
+            <h3>Departments & Cost Centers</h3>
+            <p class="subtitle">
+                Group employees by departments and track cost center allocations for budgeting and planning.
+            </p>
+        </div>
+
+        <!-- FILTERS BAR -->
+        <div class="filters-container">
+            <div class="filters-left">
+                <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search by department, code, manager...">
+                </div>
+
+                <select id="filterLocation" class="filter-select">
+                    <option value="">All Locations</option>
+                    <option value="Head Office - New York">Head Office - New York</option>
+                    <option value="Branch Office - California">Branch Office - California</option>
+                    <option value="Branch Office - Texas">Branch Office - Texas</option>
+                    <option value="Remote">Remote</option>
+                </select>
+
+                <select id="filterGroup" class="filter-select">
+                    <option value="">All Cost Groups</option>
+                    <option value="Revenue">Revenue Generating</option>
+                    <option value="Support">Support Functions</option>
+                    <option value="Operations">Operations</option>
+                    <option value="Corporate">Corporate</option>
+                </select>
+
+                <select id="filterStatus" class="filter-select">
+                    <option value="">All Budget Status</option>
+                    <option value="On Budget">On Budget</option>
+                    <option value="Over Budget">Over Budget</option>
+                    <option value="Under Utilized">Under Utilized</option>
+                </select>
+            </div>
+
+            <div class="filters-right">
+                <button class="btn btn-ghost" id="clearFiltersBtn">
+                    <i class="fa-solid fa-filter-circle-xmark"></i>
+                    Clear Filters
+                </button>
+                <button class="btn btn-primary" id="addDeptBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Department / Cost Center
+                </button>
+            </div>
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-container">
+            <div class="table-header-bar">
+                <h4>Departments & Cost Centers
+                    <span class="badge-pill" id="deptCountBadge">Total: 6</span>
+                </h4>
+                <small>Overview of departments, headcount and cost allocations.</small>
+            </div>
+
+            <div class="data-table-wrapper">
+                <table class="data-table" id="deptTable">
+                    <thead>
+                    <tr>
+                        <th>Department</th>
+                        <th>Cost Center Code</th>
+                        <th>Cost Group</th>
+                        <th>Location</th>
+                        <th>Headcount</th>
+                        <th>Monthly Budget</th>
+                        <th>Actual Spend (MTD)</th>
+                        <th>Variance</th>
+                        <th>Budget Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- SAMPLE ROWS -->
+                    <tr data-location="Head Office - New York" data-group="Revenue" data-status="On Budget">
+                        <td>
+                            <div class="emp-name">Engineering</div>
+                            <div class="emp-sub">Product Development & Platform</div>
+                        </td>
+                        <td>ENG-1001</td>
+                        <td>Revenue Generating</td>
+                        <td>Head Office - New York</td>
+                        <td>48</td>
+                        <td>$320,000</td>
+                        <td>$310,500</td>
+                        <td>+$9,500</td>
+                        <td>
+                            <span class="status-pill status-onbudget">On Budget</span>
+                        </td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Department">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Department">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-location="Head Office - New York" data-group="Support" data-status="Over Budget">
+                        <td>
+                            <div class="emp-name">HR</div>
+                            <div class="emp-sub">People Operations & Talent</div>
+                        </td>
+                        <td>HR-2001</td>
+                        <td>Support Functions</td>
+                        <td>Head Office - New York</td>
+                        <td>15</td>
+                        <td>$80,000</td>
+                        <td>$92,300</td>
+                        <td>- $12,300</td>
+                        <td>
+                            <span class="status-pill status-overbudget">Over Budget</span>
+                        </td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Department">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Department">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-location="Branch Office - California" data-group="Revenue" data-status="On Budget">
+                        <td>
+                            <div class="emp-name">Sales - West</div>
+                            <div class="emp-sub">Field & Inside Sales</div>
+                        </td>
+                        <td>SALES-W-3001</td>
+                        <td>Revenue Generating</td>
+                        <td>Branch Office - California</td>
+                        <td>26</td>
+                        <td>$150,000</td>
+                        <td>$149,200</td>
+                        <td>+$800</td>
+                        <td>
+                            <span class="status-pill status-onbudget">On Budget</span>
+                        </td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Department">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Department">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-location="Branch Office - Texas" data-group="Operations" data-status="Under Utilized">
+                        <td>
+                            <div class="emp-name">Operations - Support</div>
+                            <div class="emp-sub">Customer Success & Support</div>
+                        </td>
+                        <td>OPS-SUP-4001</td>
+                        <td>Operations</td>
+                        <td>Branch Office - Texas</td>
+                        <td>22</td>
+                        <td>$110,000</td>
+                        <td>$92,750</td>
+                        <td>+$17,250</td>
+                        <td>
+                            <span class="status-pill status-underutilized">Under Utilized</span>
+                        </td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Department">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Department">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-location="Head Office - New York" data-group="Corporate" data-status="Over Budget">
+                        <td>
+                            <div class="emp-name">Finance</div>
+                            <div class="emp-sub">Corporate Finance & Controlling</div>
+                        </td>
+                        <td>FIN-5001</td>
+                        <td>Corporate</td>
+                        <td>Head Office - New York</td>
+                        <td>12</td>
+                        <td>$95,000</td>
+                        <td>$104,600</td>
+                        <td>- $9,600</td>
+                        <td>
+                            <span class="status-pill status-overbudget">Over Budget</span>
+                        </td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Department">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Department">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr data-location="Remote" data-group="Support" data-status="Under Utilized">
+                        <td>
+                            <div class="emp-name">IT & Infrastructure</div>
+                            <div class="emp-sub">Systems, Security & Tools</div>
+                        </td>
+                        <td>IT-6001</td>
+                        <td>Support Functions</td>
+                        <td>Remote</td>
+                        <td>9</td>
+                        <td>$70,000</td>
+                        <td>$51,400</td>
+                        <td>+$18,600</td>
+                        <td>
+                            <span class="status-pill status-underutilized">Under Utilized</span>
+                        </td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="icon-btn view" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                <button class="icon-btn edit" title="Edit Department">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="icon-btn delete" title="Delete Department">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <div id="tableInfo">Showing 1 to 6 of 6 departments</div>
+                <div class="pagination">
+                    <button disabled title="Previous page">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="active-page">1</button>
+                    <button disabled>2</button>
+                    <button disabled title="Next page">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true"></div>
+
+<script>
+    (function () {
+        const sidebarEl = document.getElementById('sidebar');
+        const menuBtn = document.getElementById('menuBtn');
+        const overlay = document.getElementById('sidebarOverlay');
+
+        const toggles = document.querySelectorAll('.nav-toggle');
+        toggles.forEach(btn => {
+            const li = btn.closest('.nav-has-submenu');
+            const submenu = li.querySelector('.submenu');
+
+            btn.addEventListener('click', () => {
+                const isOpen = li.classList.toggle('open');
+                btn.setAttribute('aria-expanded', String(isOpen));
+                submenu.setAttribute('aria-hidden', String(!isOpen));
+
+                document.querySelectorAll('.nav-has-submenu').forEach(other => {
+                    if (other !== li && other.classList.contains('open')) {
+                        other.classList.remove('open');
+                        const otherBtn = other.querySelector('.nav-toggle');
+                        const otherSub = other.querySelector('.submenu');
+                        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                        if (otherSub) otherSub.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            });
+
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                    e.preventDefault();
+                    btn.click();
+                }
+            });
+        });
+
+        function openMobileSidebar() {
+            sidebarEl.classList.add('mobile-open', 'mobile-visible');
+            overlay.classList.add('show');
+            overlay.setAttribute('aria-hidden', 'false');
+            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMobileSidebar() {
+            sidebarEl.classList.remove('mobile-open', 'mobile-visible');
+            overlay.classList.remove('show');
+            overlay.setAttribute('aria-hidden', 'true');
+            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        function handleResize() {
+            if (window.innerWidth <= 900) {
+                if (!sidebarEl.classList.contains('mobile-visible')) {
+                    sidebarEl.style.transform = 'translateX(-110%)';
+                } else {
+                    sidebarEl.style.transform = 'translateX(0)';
+                }
+                sidebarEl.style.position = 'fixed';
+                sidebarEl.style.height = '100vh';
+                sidebarEl.style.top = '0';
+                sidebarEl.style.left = '0';
+                sidebarEl.style.zIndex = '40';
+            } else {
+                sidebarEl.style.transform = '';
+                sidebarEl.style.position = '';
+                sidebarEl.style.height = '';
+                sidebarEl.style.top = '';
+                sidebarEl.style.left = '';
+                sidebarEl.style.zIndex = '';
+                overlay.classList.remove('show');
+                overlay.setAttribute('aria-hidden', 'true');
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+                sidebarEl.classList.remove('mobile-visible');
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                if (expanded) {
+                    closeMobileSidebar();
+                } else {
+                    openMobileSidebar();
+                }
+            });
+        }
+
+        overlay.addEventListener('click', () => {
+            closeMobileSidebar();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' || e.key === 'Esc') {
+                if (overlay.classList.contains('show')) {
+                    closeMobileSidebar();
+                }
+            }
+        });
+    })();
+
+    // Departments & Cost Centers filters
+    const searchInput = document.getElementById('searchInput');
+    const filterLocation = document.getElementById('filterLocation');
+    const filterGroup = document.getElementById('filterGroup');
+    const filterStatus = document.getElementById('filterStatus');
+    const deptTable = document.getElementById('deptTable');
+    const deptCountBadge = document.getElementById('deptCountBadge');
+    const tableInfo = document.getElementById('tableInfo');
+    const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+
+    function applyFilters() {
+        const rows = deptTable.querySelectorAll('tbody tr');
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        const locFilter = filterLocation.value;
+        const groupFilter = filterGroup.value;
+        const statusFilter = filterStatus.value;
+
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+            const rowText = row.textContent.toLowerCase();
+            const rowLoc = row.getAttribute('data-location');
+            const rowGroup = row.getAttribute('data-group');
+            const rowStatus = row.getAttribute('data-status');
+
+            const matchesSearch = !searchTerm || rowText.includes(searchTerm);
+            const matchesLoc = !locFilter || rowLoc === locFilter;
+            const matchesGroup = !groupFilter || rowGroup === groupFilter;
+            const matchesStatus = !statusFilter || rowStatus === statusFilter;
+
+            if (matchesSearch && matchesLoc && matchesGroup && matchesStatus) {
+                row.style.display = '';
+                visibleCount++;
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        deptCountBadge.textContent = 'Total: ' + visibleCount;
+        tableInfo.textContent = `Showing 1 to ${visibleCount} of ${deptTable.querySelectorAll('tbody tr').length} departments`;
+    }
+
+    if (searchInput) searchInput.addEventListener('input', applyFilters);
+    if (filterLocation) filterLocation.addEventListener('change', applyFilters);
+    if (filterGroup) filterGroup.addEventListener('change', applyFilters);
+    if (filterStatus) filterStatus.addEventListener('change', applyFilters);
+
+    if (clearFiltersBtn) {
+        clearFiltersBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            filterLocation.value = '';
+            filterGroup.value = '';
+            filterStatus.value = '';
+            applyFilters();
+        });
+    }
+
+    const addDeptBtn = document.getElementById('addDeptBtn');
+    if (addDeptBtn) {
+        addDeptBtn.addEventListener('click', () => {
+            // Replace with your actual Dept / Cost Center form page
+            window.location.href = 'add_department_costcenter.html';
+        });
+    }
+
+    // Initial count
+    applyFilters();
+</script>
+</body>
+</html>

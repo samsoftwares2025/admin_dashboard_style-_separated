@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>HR Dashboard</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="static/style.css">
+    <!-- Consolidated / cleaned styles: only classes actually used in the HTML -->
+  
+</head>
+
+<body>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">ABC</div>
+                    <div class="logo-text">ABC Technologies</div>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
+                        <span class="nav-text">Employees</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="employee_master.html" class="submenu-link">Employee Master Data</a></li>
+                        <li><a href="employee_contact_personal_info.html" class="submenu-link">Contact & Personal Info</a></li>
+                        <li><a href="employment_history.html" class="submenu-link">Employment History</a></li>
+                        <li><a href="visa_pro_work.html" class="submenu-link">Visa and Pro Work</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-building"></i></span>
+                        <span class="nav-text">Organization</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="department_and_cost_ceneters.html" class="submenu-link">Departments & Cost Centers</a></li>
+                        <li><a href="roles_and_permissions_listing.html" class="submenu-link">Roles & Permissions</a></li>
+                        <li><a href="policies_listing.html" class="submenu-link">Policies</a></li>
+                        <li><a class="submenu-link">Company Rules</a></li>
+                        <li><a class="submenu-link">Compliance Documentation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-user-tie"></i></span>
+                        <span class="nav-text">Recruitment & ATS</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Job Management</a></li>
+                        <li><a class="submenu-link">Candidate Management</a></li>
+                        <li><a class="submenu-link">Interview Management</a></li>
+                        <li><a class="submenu-link">Offer & Hiring</a></li>
+                        <li><a class="submenu-link">Onboarding</a></li>
+                        <li><a class="submenu-link">Offboarding</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-clock"></i></span>
+                        <span class="nav-text">Attendance</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Attendance</a></li>
+                        <li><a class="submenu-link">Leave</a></li>
+                        <li><a class="submenu-link">Timesheets</a></li>
+                        <li><a class="submenu-link">Shift Management</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+                        <span class="nav-text">Payroll Management</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Payroll Setup</a></li>
+                        <li><a class="submenu-link">Payroll Processing</a></li>
+                        <li><a class="submenu-link">Payroll Output</a></li>
+                        <li><a class="submenu-link">Compliance</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span>
+                        <span class="nav-text">Performance & Appraisals</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Goal & KPI Management</a></li>
+                        <li><a class="submenu-link">Assessment</a></li>
+                        <li><a class="submenu-link">Appraisal Cycles</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <span class="nav-text">Learning & Development</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Training Management</a></li>
+                        <li><a class="submenu-link">e-Learning</a></li>
+                        <li><a class="submenu-link">Skill Development</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-heart"></i></span>
+                        <span class="nav-text">Employee Engagement</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Surveys & Feedback</a></li>
+                        <li><a class="submenu-link">Recognition</a></li>
+                        <li><a class="submenu-link">Communication</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-sitemap"></i></span>
+                        <span class="nav-text">Talent & Succession Planning</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Competency Framework</a></li>
+                        <li><a class="submenu-link">Succession Planning</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-gift"></i></span>
+                        <span class="nav-text">Benefits & Compensation</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Health & Insurance Plans</a></li>
+                        <li><a class="submenu-link">Allowance Policies</a></li>
+                        <li><a class="submenu-link">Bonus Planning</a></li>
+                        <li><a class="submenu-link">Increment Budgeting</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                        <span class="nav-text">Expense</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Expense Category</a></li>
+                        <li><a class="submenu-link">Expenses</a></li>
+                        <li><a class="submenu-link">Expense Claims</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-boxes-stacked"></i></span>
+                        <span class="nav-text">Asset Management</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Fixed Assets</a></li>
+                        <li><a class="submenu-link">Depreciation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-chart-bar"></i></span>
+                        <span class="nav-text">Reporting & Analytics</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Attendance Reports</a></li>
+                        <li><a class="submenu-link">Leave Trends</a></li>
+                        <li><a class="submenu-link">Payroll Summary</a></li>
+                        <li><a class="submenu-link">Employee Analytics</a></li>
+                        <li><a class="submenu-link">Custom Reports</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-users-gear"></i></span>
+                        Customer Management
+                    </a>
+                </li>
+
+                <li class="nav-item nav-has-submenu">
+                    <button class="nav-toggle">
+                        <span class="nav-icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                        <span class="nav-text">Loan / EMI / Advance Module</span>
+                        <span class="nav-caret">▸</span>
+                    </button>
+                    <ul class="submenu">
+                        <li><a class="submenu-link">Employee Loan Request</a></li>
+                        <li><a class="submenu-link">EMI Calculation</a></li>
+                        <li><a class="submenu-link">EMI Auto Deduction</a></li>
+                        <li><a class="submenu-link">Loan Balance Status</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                        Settings
+                    </a>
+                </li>
+
+<button id="logoutBtn" class="nav-link logout-btn-mob" type="button" title="Log out"
+                        aria-label="Log out">
+                        <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        Logout
+                    </button>
+            </ul>
+
+            <div class="user-profile">
+                <div class="user-avatar">AB</div>
+                <div class="user-info">
+                    <h4>Abhinav B</h4>
+                    <p>Admin • ID: #AD-2048</p>
+                    
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+
+            <div class="header">
+                <!-- Mobile menu button (visible on small screens) -->
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="page-title">
+                    <h1>Welcome Abhinav B</h1>
+                </div>
+
+                <div class="header-actions">
+                    <button class="notification-btn" title="Notifications">
+                        🔔
+                        <span class="notification-badge">2</span>
+                    </button>
+                    <div class="current-date">Monday, Dec 1, 2025</div>
+                    <button id="logoutBtn" class="nav-link logout-btn" type="button" title="Log out"
+                        aria-label="Log out">
+                        <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        Logout
+                    </button>
+                </div>
+
+
+            </div>
+
+            <!-- Top row: 3 cards -->
+            <div class="top-grid">
+                <!-- Card 1: Total Employees -->
+                <div class="card">
+                    <div class="card-amount-row">
+                        <div>
+                            <div class="small">Total Employees</div>
+                            <div class="big">245</div>
+                            <div class="sub">Company-wide headcount</div>
+                        </div>
+                        <div class="mini-wrap">
+                            <canvas id="miniDonut" width="100" height="100"></canvas>
+                        </div>
+                    </div>
+                    <div class="card-legend">
+                        <div class="legend-title">DEPARTMENTS</div>
+                        <div class="legend-items">
+                            • Engineering — 120<br>
+                            • Marketing — 65<br>
+                            • HR — 40<br>
+                            • Sales — 20
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Employee Head Count -->
+                <div class="card">
+                    <h3>Employee Head Count</h3>
+                    <div class="chart-wrap"><canvas id="headCountChart"></canvas></div>
+                </div>
+
+                <!-- Card 3: CTC Payout -->
+                <div class="card">
+                    <h3>CTC Payout (Last 6 months)</h3>
+                    <div class="chart-wrap"><canvas id="ctcChart"></canvas></div>
+                </div>
+            </div>
+
+            <!-- Quick Buttons -->
+            <section class="quick-row">
+                <div class="quick green">
+                    <span class="notification-badge">5</span>
+                    Pending Requests
+                </div>
+                <div class="quick red">Compliance Checks</div>
+                <div class="quick yellow">
+                    <span class="notification-badge">3</span>
+                    Today's Events
+                </div>
+                <div class="quick blue">
+                    <span class="notification-badge">3</span>
+                    Leave Requests
+                </div>
+            </section>
+
+            <!-- Bottom row: Projects -->
+            <div class="bottom-grid">
+                <div class="card">
+                    <div class="card-heading">
+                        <div class="stats-title">Company Projects Overview</div>
+                    </div>
+
+                    <div class="projects-grid">
+                        <!-- Project 1 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div style="flex: 1;">
+                                    <h4 class="project-title">HR Portal Redesign</h4>
+                                    <p class="project-description">Modernizing the employee portal with improved UX and
+                                        mobile responsiveness</p>
+                                </div>
+                                <span class="project-status status-active">Active</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-meta-item">👥 8 Members</span>
+                                <span class="project-meta-item">📅 Due: Dec 15, 2025</span>
+                                <span class="project-meta-item">💼 HR Department</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span>Progress</span>
+                                    <span class="progress-percentage">75%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div style="flex: 1;">
+                                    <h4 class="project-title">Payroll System Upgrade</h4>
+                                    <p class="project-description">Integration of new payroll automation features and
+                                        compliance updates</p>
+                                </div>
+                                <span class="project-status status-pending">Pending</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-meta-item">👥 5 Members</span>
+                                <span class="project-meta-item">📅 Due: Jan 30, 2026</span>
+                                <span class="project-meta-item">💼 Finance</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span>Progress</span>
+                                    <span class="progress-percentage">45%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div style="flex: 1;">
+                                    <h4 class="project-title">Employee Training Program</h4>
+                                    <p class="project-description">Comprehensive onboarding and skill development
+                                        initiative for Q4</p>
+                                </div>
+                                <span class="project-status status-completed">Completed</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-meta-item">👥 12 Members</span>
+                                <span class="project-meta-item">📅 Completed: Nov 25, 2025</span>
+                                <span class="project-meta-item">💼 L&D</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span>Progress</span>
+                                    <span class="progress-percentage">100%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div style="flex: 1;">
+                                    <h4 class="project-title">Performance Review System</h4>
+                                    <p class="project-description">Digital transformation of annual performance
+                                        evaluation process</p>
+                                </div>
+                                <span class="project-status status-active">Active</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-meta-item">👥 6 Members</span>
+                                <span class="project-meta-item">📅 Due: Feb 10, 2026</span>
+                                <span class="project-meta-item">💼 HR Department</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span>Progress</span>
+                                    <span class="progress-percentage">60%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div style="flex: 1;">
+                                    <h4 class="project-title">Office Expansion Planning</h4>
+                                    <p class="project-description">Strategic planning for new regional office setup and
+                                        infrastructure</p>
+                                </div>
+                                <span class="project-status status-planning">Planning</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-meta-item">👥 10 Members</span>
+                                <span class="project-meta-item">📅 Due: Mar 30, 2026</span>
+                                <span class="project-meta-item">💼 Operations</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span>Progress</span>
+                                    <span class="progress-percentage">20%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div style="flex: 1;">
+                                    <h4 class="project-title">Benefits Package Review</h4>
+                                    <p class="project-description">Annual review and optimization of employee benefits
+                                        and wellness programs</p>
+                                </div>
+                                <span class="project-status status-active">Active</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-meta-item">👥 4 Members</span>
+                                <span class="project-meta-item">📅 Due: Jan 15, 2026</span>
+                                <span class="project-meta-item">💼 HR Department</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span>Progress</span>
+                                    <span class="progress-percentage">85%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Overlay used for mobile sidebar -->
+    <div id="sidebarOverlay" class="sidebar-overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <script>
+        const colors = {
+            blueDark: '#2d78b5',
+            blueLight: '#8fc3e8',
+            accent1: '#58a3d7',
+            accent2: '#3b83b7',
+            muted: '#e9eef5'
+        };
+
+        /* Mini Donut Chart */
+        new Chart(document.getElementById('miniDonut'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Engineering', 'Marketing', 'HR'],
+                datasets: [{
+                    data: [120, 65, 60],
+                    backgroundColor: [colors.blueDark, colors.blueLight, '#dfe9f3'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                cutout: '70%',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                }
+            }
+        });
+
+        /* Employee Head Count Chart */
+        new Chart(document.getElementById('headCountChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+                datasets: [{
+                    label: 'Active',
+                    data: [550, 152, 155, 158, 160, 162],
+                    backgroundColor: colors.blueDark,
+                    borderRadius: 6
+                }, {
+                    label: 'Inactive',
+                    data: [12, 10, 9, 8, 7, 5],
+                    backgroundColor: '#B0BEC5',
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' } },
+                    x: { grid: { display: false } }
+                },
+                plugins: {
+                    legend: { display: true, position: 'bottom' }
+                }
+            }
+        });
+
+        /* CTC Payout Chart */
+        new Chart(document.getElementById('ctcChart'), {
+            type: 'bar',
+            data: {
+                labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                datasets: [{
+                    type: 'bar',
+                    label: 'CTC',
+                    data: [70, 75, 72, 78, 76, 80],
+                    backgroundColor: '#D3D3D3',
+                    borderRadius: 6
+                }, {
+                    type: 'line',
+                    label: 'Net Salary',
+                    data: [60, 62, 58, 63, 61, 65],
+                    borderColor: '#FFCA28',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#FFCA28'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' } },
+                    x: { grid: { display: false } }
+                },
+                plugins: {
+                    legend: { display: true, position: 'bottom' }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        (function () {
+            // Toggle submenu(s) behavior
+            const toggles = document.querySelectorAll('.nav-toggle');
+
+            toggles.forEach(btn => {
+                const li = btn.closest('.nav-has-submenu');
+                const submenu = li.querySelector('.submenu');
+
+                // Click toggling
+                btn.addEventListener('click', (e) => {
+                    const isOpen = li.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', String(isOpen));
+                    submenu.setAttribute('aria-hidden', String(!isOpen));
+
+                    // Optional: close other open submenus (only one open at a time)
+                    document.querySelectorAll('.nav-has-submenu').forEach(other => {
+                        if (other !== li && other.classList.contains('open')) {
+                            other.classList.remove('open');
+                            const otherBtn = other.querySelector('.nav-toggle');
+                            const otherSub = other.querySelector('.submenu');
+                            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                            if (otherSub) otherSub.setAttribute('aria-hidden', 'true');
+                        }
+                    });
+                });
+
+                // Keyboard support: open/close on Enter or Space
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            });
+
+            // Close submenus if user clicks outside the sidebar (optional convenience)
+            document.addEventListener('click', (e) => {
+                const sidebar = document.querySelector('aside.sidebar');
+                if (!sidebar) return;
+                if (!sidebar.contains(e.target)) {
+                    document.querySelectorAll('.nav-has-submenu.open').forEach(openItem => {
+                        openItem.classList.remove('open');
+                        const b = openItem.querySelector('.nav-toggle');
+                        const s = openItem.querySelector('.submenu');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                        if (s) s.setAttribute('aria-hidden', 'true');
+                    });
+                }
+            });
+
+            // Mobile / responsive sidebar behavior
+            const sidebarEl = document.getElementById('sidebar');
+            const menuBtn = document.getElementById('menuBtn');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            function openMobileSidebar() {
+                // show sidebar
+                sidebarEl.classList.add('mobile-open');
+                sidebarEl.classList.add('mobile-visible');
+                overlay.classList.add('show');
+                overlay.setAttribute('aria-hidden', 'false');
+                menuBtn.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeMobileSidebar() {
+                sidebarEl.classList.remove('mobile-open');
+                // keep transform override removed so handleResize can set it
+                sidebarEl.classList.remove('mobile-visible');
+                overlay.classList.remove('show');
+                overlay.setAttribute('aria-hidden', 'true');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            }
+
+            function handleResize() {
+                if (window.innerWidth <= 900) {
+                    // keep sidebar off-canvas by default on small screens
+                    if (!sidebarEl.classList.contains('mobile-visible')) {
+                        sidebarEl.style.transform = 'translateX(-110%)';
+                    } else {
+                        // if marked visible, ensure it shows
+                        sidebarEl.style.transform = 'translateX(0)';
+                    }
+                    sidebarEl.style.position = 'fixed';
+                    sidebarEl.style.height = '100vh';
+                    sidebarEl.style.top = '0';
+                    sidebarEl.style.left = '0';
+                    sidebarEl.style.zIndex = '40';
+                } else {
+                    // restore desktop styles
+                    sidebarEl.style.transform = '';
+                    sidebarEl.style.position = '';
+                    sidebarEl.style.height = '';
+                    sidebarEl.style.top = '';
+                    sidebarEl.style.left = '';
+                    sidebarEl.style.zIndex = '';
+                    // hide overlay if present
+                    overlay.classList.remove('show');
+                    overlay.setAttribute('aria-hidden', 'true');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                    sidebarEl.classList.remove('mobile-visible');
+                }
+            }
+
+            window.addEventListener('resize', handleResize);
+            handleResize();
+
+            // menu toggle click
+            if (menuBtn) {
+                menuBtn.addEventListener('click', (e) => {
+                    // toggle
+                    const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                    if (expanded) {
+                        closeMobileSidebar();
+                    } else {
+                        openMobileSidebar();
+                    }
+                });
+            }
+
+            // overlay click closes sidebar
+            overlay.addEventListener('click', () => {
+                closeMobileSidebar();
+            });
+
+            // close sidebar when pressing Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                    // only close if mobile overlay is shown
+                    if (overlay.classList.contains('show')) {
+                        closeMobileSidebar();
+                    }
+                }
+            });
+
+            // Clicking outside sidebar on mobile should close it as well (overlay handles it),
+            // but keep the existing document click behavior (closes submenus) intact.
+            // Note: overlay is inserted in DOM and captures clicks.
+
+        })();
+    </script>
+
+</body>
+
+</html>
