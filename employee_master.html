@@ -325,262 +325,250 @@
                 </div>
 
                 <div class="data-table-wrapper">
-                    <table class="data-table" id="employeeTable">
-                        <thead>
-                            <tr>
-                                <th>Employee ID</th>
-                                <th>Employee</th>
-                                <th>Department</th>
-                                <th>Designation</th>
-                                <th>Location</th>
-                                <th>Status</th>
-                                <th>Joining Date</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- SAMPLE ROWS -->
-                            <tr data-department="Engineering" data-status="Active">
-                                <td>#EMP-1001</td>
-                                <td>
-                                    <div class="emp-name">John Smith</div>
-                                    <div class="emp-sub">john.smith@abctech.com</div>
-                                </td>
-                                <td>Engineering</td>
-                                <td>Senior Software Engineer</td>
-                                <td>Head Office - New York</td>
-                                <td>
-                                    <span class="status-pill status-active">
-                                        <span class="dot">●</span> Active
-                                    </span>
-                                </td>
-                                <td>2022-03-15</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Profile">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                         <button class="icon-btn delete" title="Delete">
-                                             <i class="fa-solid fa-trash"></i>
-                                         </button>
-                                    </div>
-                                </td>
-                            </tr>
+                  <table class="data-table" id="employeeTable">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Joining Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
 
-                            <tr data-department="Marketing" data-status="Probation">
-                                <td>#EMP-1002</td>
-                                <td>
-                                    <div class="emp-name">Sarah Johnson</div>
-                                    <div class="emp-sub">sarah.johnson@abctech.com</div>
-                                </td>
-                                <td>Marketing</td>
-                                <td>Marketing Specialist</td>
-                                <td>Branch Office - California</td>
-                                <td>
-                                    <span class="status-pill status-probation">
-                                        <span class="dot">●</span> Probation
-                                    </span>
-                                </td>
-                                <td>2025-01-10</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Profile">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete">
-                                             <i class="fa-solid fa-trash"></i>
-                                         </button>
-                                    </div>
-                                </td>
-                            </tr>
+    <tbody>
 
-                            <tr data-department="HR" data-status="Active">
-                                <td>#EMP-1003</td>
-                                <td>
-                                    <div class="emp-name">Mike Davis</div>
-                                    <div class="emp-sub">mike.davis@abctech.com</div>
-                                </td>
-                                <td>HR</td>
-                                <td>HR Manager</td>
-                                <td>Head Office - New York</td>
-                                <td>
-                                    <span class="status-pill status-active">
-                                        <span class="dot">●</span> Active
-                                    </span>
-                                </td>
-                                <td>2020-11-01</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Profile">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                         <button class="icon-btn delete" title="Delete">
-                                             <i class="fa-solid fa-trash"></i>
-                                         </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="Engineering" data-status="Active">
+            <td>#EMP-1001</td>
+            <td>John Smith</td>
+            <td>john.smith@abctech.com</td>
+            <td>Engineering</td>
+            <td>Senior Software Engineer</td>
+            <td>Head Office - New York</td>
+            <td>
+                <span class="status-pill status-active">
+                    <span class="dot">●</span> Active
+                </span>
+            </td>
+            <td>2022-03-15</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view" title="View Profile">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="icon-btn edit" title="Edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="icon-btn delete" title="Delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="Sales" data-status="Inactive">
-                                <td>#EMP-1004</td>
-                                <td>
-                                    <div class="emp-name">Emily Carter</div>
-                                    <div class="emp-sub">emily.carter@abctech.com</div>
-                                </td>
-                                <td>Sales</td>
-                                <td>Account Executive</td>
-                                <td>Branch Office - Texas</td>
-                                <td>
-                                    <span class="status-pill status-inactive">
-                                        <span class="dot">●</span> Inactive
-                                    </span>
-                                </td>
-                                <td>2019-08-20</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Profile">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                         <button class="icon-btn delete" title="Delete">
-                                             <i class="fa-solid fa-trash"></i>
-                                         </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="Marketing" data-status="Probation">
+            <td>#EMP-1002</td>
+            <td>Sarah Johnson</td>
+            <td>sarah.johnson@abctech.com</td>
+            <td>Marketing</td>
+            <td>Marketing Specialist</td>
+            <td>Branch Office - California</td>
+            <td>
+                <span class="status-pill status-probation">
+                    <span class="dot">●</span> Probation
+                </span>
+            </td>
+            <td>2025-01-10</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view" title="View Profile">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="icon-btn edit" title="Edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="icon-btn delete" title="Delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="Engineering" data-status="Active">
-                                <td>#EMP-1005</td>
-                                <td>
-                                    <div class="emp-name">Rahul Sharma</div>
-                                    <div class="emp-sub">rahul.sharma@abctech.com</div>
-                                </td>
-                                <td>Engineering</td>
-                                <td>DevOps Engineer</td>
-                                <td>Remote</td>
-                                <td>
-                                    <span class="status-pill status-active">
-                                        <span class="dot">●</span> Active
-                                    </span>
-                                </td>
-                                <td>2021-05-12</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Profile">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                         <button class="icon-btn delete" title="Delete">
-                                             <i class="fa-solid fa-trash"></i>
-                                         </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="HR" data-status="Active">
+            <td>#EMP-1003</td>
+            <td>Mike Davis</td>
+            <td>mike.davis@abctech.com</td>
+            <td>HR</td>
+            <td>HR Manager</td>
+            <td>Head Office - New York</td>
+            <td>
+                <span class="status-pill status-active">
+                    <span class="dot">●</span> Active
+                </span>
+            </td>
+            <td>2020-11-01</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view" title="View Profile">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="icon-btn edit" title="Edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="icon-btn delete" title="Delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="Finance" data-status="Active">
-                                <td>#EMP-1006</td>
-                                <td>
-                                    <div class="emp-name">Oliver Brown</div>
-                                    <div class="emp-sub">oliver.brown@abctech.com</div>
-                                </td>
-                                <td>Finance</td>
-                                <td>Financial Analyst</td>
-                                <td>Head Office - New York</td>
-                                <td>
-                                    <span class="status-pill status-active">
-                                        <span class="dot">●</span> Active
-                                    </span>
-                                </td>
-                                <td>2023-02-05</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Profile">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                         <button class="icon-btn delete" title="Delete">
-                                             <i class="fa-solid fa-trash"></i>
-                                         </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="Sales" data-status="Inactive">
+            <td>#EMP-1004</td>
+            <td>Emily Carter</td>
+            <td>emily.carter@abctech.com</td>
+            <td>Sales</td>
+            <td>Account Executive</td>
+            <td>Branch Office - Texas</td>
+            <td>
+                <span class="status-pill status-inactive">
+                    <span class="dot">●</span> Inactive
+                </span>
+            </td>
+            <td>2019-08-20</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view" title="View Profile">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="icon-btn edit" title="Edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="icon-btn delete" title="Delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="Sales" data-status="Probation">
-                                <td>#EMP-1007</td>
-                                <td>
-                                    <div class="emp-name">Sophia Lee</div>
-                                    <div class="emp-sub">sophia.lee@abctech.com</div>
-                                </td>
-                                <td>Sales</td>
-                                <td>Sales Associate</td>
-                                <td>Branch Office - California</td>
-                                <td>
-                                    <span class="status-pill status-probation">
-                                        <span class="dot">●</span> Probation
-                                    </span>
-                                </td>
-                                <td>2025-10-01</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Profile">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                         <button class="icon-btn delete" title="Delete">
-                                             <i class="fa-solid fa-trash"></i>
-                                         </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="Engineering" data-status="Active">
+            <td>#EMP-1005</td>
+            <td>Rahul Sharma</td>
+            <td>rahul.sharma@abctech.com</td>
+            <td>Engineering</td>
+            <td>DevOps Engineer</td>
+            <td>Remote</td>
+            <td>
+                <span class="status-pill status-active">
+                    <span class="dot">●</span> Active
+                </span>
+            </td>
+            <td>2021-05-12</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view" title="View Profile">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="icon-btn edit" title="Edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="icon-btn delete" title="Delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="HR" data-status="Inactive">
-                                <td>#EMP-1008</td>
-                                <td>
-                                    <div class="emp-name">Priya Nair</div>
-                                    <div class="emp-sub">priya.nair@abctech.com</div>
-                                </td>
-                                <td>HR</td>
-                                <td>HR Executive</td>
-                                <td>Remote</td>
-                                <td>
-                                    <span class="status-pill status-inactive">
-                                        <span class="dot">●</span> Inactive
-                                    </span>
-                                </td>
-                                <td>2018-07-30</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Profile">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                         <button class="icon-btn delete" title="Delete">
-                                             <i class="fa-solid fa-trash"></i>
-                                         </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <tr data-department="Finance" data-status="Active">
+            <td>#EMP-1006</td>
+            <td>Oliver Brown</td>
+            <td>oliver.brown@abctech.com</td>
+            <td>Finance</td>
+            <td>Financial Analyst</td>
+            <td>Head Office - New York</td>
+            <td>
+                <span class="status-pill status-active">
+                    <span class="dot">●</span> Active
+                </span>
+            </td>
+            <td>2023-02-05</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view" title="View Profile">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="icon-btn edit" title="Edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="icon-btn delete" title="Delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+
+        <tr data-department="Sales" data-status="Probation">
+            <td>#EMP-1007</td>
+            <td>Sophia Lee</td>
+            <td>sophia.lee@abctech.com</td>
+            <td>Sales</td>
+            <td>Sales Associate</td>
+            <td>Branch Office - California</td>
+            <td>
+                <span class="status-pill status-probation">
+                    <span class="dot">●</span> Probation
+                </span>
+            </td>
+            <td>2025-10-01</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view" title="View Profile">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="icon-btn edit" title="Edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="icon-btn delete" title="Delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+
+        <tr data-department="HR" data-status="Inactive">
+            <td>#EMP-1008</td>
+            <td>Priya Nair</td>
+            <td>priya.nair@abctech.com</td>
+            <td>HR</td>
+            <td>HR Executive</td>
+            <td>Remote</td>
+            <td>
+                <span class="status-pill status-inactive">
+                    <span class="dot">●</span> Inactive
+                </span>
+            </td>
+            <td>2018-07-30</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view" title="View Profile">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="icon-btn edit" title="Edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="icon-btn delete" title="Delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
                 </div>
 
                 <div class="table-footer">

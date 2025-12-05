@@ -329,301 +329,205 @@
 
                 <div class="data-table-wrapper">
                     <table class="data-table" id="employeeTable">
-                        <thead>
-                            <tr>
-                                <th>Employee ID</th>
-                                <th>Employee</th>
-                                <th>Personal Email</th>
-                                <th>Phone Number</th>
-                                <th>Emergency Contact</th>
-                                <th>Address</th>
-                                <th>Location</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- SAMPLE ROWS -->
-                            <tr data-department="Engineering" data-location="Head Office - New York">
-                                <td>#EMP-1001</td>
-                                <td>
-                                    <div class="emp-name">John Smith</div>
-                                    <div class="emp-sub">Senior Software Engineer • Engineering</div>
-                                </td>
-                                <td>
-                                    <div>john.personal@example.com</div>
-                                    <div class="contact-sub">Company: john.smith@abctech.com</div>
-                                </td>
-                                <td>+1 555-0101</td>
-                                <td>
-                                    <div>Anna Smith (Spouse)</div>
-                                    <div class="contact-sub">+1 555-1101</div>
-                                </td>
-                                <td>
-                                    123 5th Ave, Manhattan
-                                    <div class="contact-sub">New York, NY 10001</div>
-                                </td>
-                                <td>Head Office - New York</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Details">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit Contact Info">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete Contact Info">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Job Title</th>
+            <th>Department</th>
+            <th>Personal Email</th>
+            <th>Company Email</th>
+            <th>Phone Number</th>
+            <th>Emergency Contact Name</th>
+            <th>Emergency Contact Phone</th>
+            <th>Address</th>
+            <th>City / State / ZIP</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
 
-                            <tr data-department="Marketing" data-location="Branch Office - California">
-                                <td>#EMP-1002</td>
-                                <td>
-                                    <div class="emp-name">Sarah Johnson</div>
-                                    <div class="emp-sub">Marketing Specialist • Marketing</div>
-                                </td>
-                                <td>
-                                    <div>sarah.johnson.personal@gmail.com</div>
-                                    <div class="contact-sub">Company: sarah.johnson@abctech.com</div>
-                                </td>
-                                <td>+1 555-0202</td>
-                                <td>
-                                    <div>David Johnson (Brother)</div>
-                                    <div class="contact-sub">+1 555-1202</div>
-                                </td>
-                                <td>
-                                    45 Bayview Street
-                                    <div class="contact-sub">San Francisco, CA 94105</div>
-                                </td>
-                                <td>Branch Office - California</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Details">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit Contact Info">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete Contact Info">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+    <tbody>
 
-                            <tr data-department="HR" data-location="Head Office - New York">
-                                <td>#EMP-1003</td>
-                                <td>
-                                    <div class="emp-name">Mike Davis</div>
-                                    <div class="emp-sub">HR Manager • HR</div>
-                                </td>
-                                <td>
-                                    <div>mike.davis.personal@yahoo.com</div>
-                                    <div class="contact-sub">Company: mike.davis@abctech.com</div>
-                                </td>
-                                <td>+1 555-0303</td>
-                                <td>
-                                    <div>Laura Davis (Spouse)</div>
-                                    <div class="contact-sub">+1 555-1303</div>
-                                </td>
-                                <td>
-                                    890 Park Lane
-                                    <div class="contact-sub">New York, NY 10009</div>
-                                </td>
-                                <td>Head Office - New York</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Details">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit Contact Info">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete Contact Info">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="Engineering" data-location="Head Office - New York">
+            <td>#EMP-1001</td>
+            <td>John Smith</td>
+            <td>Senior Software Engineer</td>
+            <td>Engineering</td>
+            <td>john.personal@example.com</td>
+            <td>john.smith@abctech.com</td>
+            <td>+1 555-0101</td>
+            <td>Anna Smith (Spouse)</td>
+            <td>+1 555-1101</td>
+            <td>123 5th Ave, Manhattan</td>
+            <td>New York, NY 10001</td>
+            <td>Head Office - New York</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                    <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                    <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="Sales" data-location="Branch Office - Texas">
-                                <td>#EMP-1004</td>
-                                <td>
-                                    <div class="emp-name">Emily Carter</div>
-                                    <div class="emp-sub">Account Executive • Sales</div>
-                                </td>
-                                <td>
-                                    <div>emily.carter.personal@gmail.com</div>
-                                    <div class="contact-sub">Company: emily.carter@abctech.com</div>
-                                </td>
-                                <td>+1 555-0404</td>
-                                <td>
-                                    <div>James Carter (Father)</div>
-                                    <div class="contact-sub">+1 555-1404</div>
-                                </td>
-                                <td>
-                                    22 Longhorn Drive
-                                    <div class="contact-sub">Dallas, TX 75201</div>
-                                </td>
-                                <td>Branch Office - Texas</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Details">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit Contact Info">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete Contact Info">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="Marketing" data-location="Branch Office - California">
+            <td>#EMP-1002</td>
+            <td>Sarah Johnson</td>
+            <td>Marketing Specialist</td>
+            <td>Marketing</td>
+            <td>sarah.johnson.personal@gmail.com</td>
+            <td>sarah.johnson@abctech.com</td>
+            <td>+1 555-0202</td>
+            <td>David Johnson (Brother)</td>
+            <td>+1 555-1202</td>
+            <td>45 Bayview Street</td>
+            <td>San Francisco, CA 94105</td>
+            <td>Branch Office - California</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                    <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                    <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="Engineering" data-location="Remote">
-                                <td>#EMP-1005</td>
-                                <td>
-                                    <div class="emp-name">Rahul Sharma</div>
-                                    <div class="emp-sub">DevOps Engineer • Engineering</div>
-                                </td>
-                                <td>
-                                    <div>rahul.sharma.personal@gmail.com</div>
-                                    <div class="contact-sub">Company: rahul.sharma@abctech.com</div>
-                                </td>
-                                <td>+91 98765 12345</td>
-                                <td>
-                                    <div>Rohit Sharma (Brother)</div>
-                                    <div class="contact-sub">+91 98765 54321</div>
-                                </td>
-                                <td>
-                                    14 MG Road
-                                    <div class="contact-sub">Bengaluru, KA 560001</div>
-                                </td>
-                                <td>Remote</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Details">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit Contact Info">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete Contact Info">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="HR" data-location="Head Office - New York">
+            <td>#EMP-1003</td>
+            <td>Mike Davis</td>
+            <td>HR Manager</td>
+            <td>HR</td>
+            <td>mike.davis.personal@yahoo.com</td>
+            <td>mike.davis@abctech.com</td>
+            <td>+1 555-0303</td>
+            <td>Laura Davis (Spouse)</td>
+            <td>+1 555-1303</td>
+            <td>890 Park Lane</td>
+            <td>New York, NY 10009</td>
+            <td>Head Office - New York</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                    <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                    <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="Finance" data-location="Head Office - New York">
-                                <td>#EMP-1006</td>
-                                <td>
-                                    <div class="emp-name">Oliver Brown</div>
-                                    <div class="emp-sub">Financial Analyst • Finance</div>
-                                </td>
-                                <td>
-                                    <div>oliver.brown.personal@mail.com</div>
-                                    <div class="contact-sub">Company: oliver.brown@abctech.com</div>
-                                </td>
-                                <td>+1 555-0606</td>
-                                <td>
-                                    <div>Emma Brown (Sister)</div>
-                                    <div class="contact-sub">+1 555-1606</div>
-                                </td>
-                                <td>
-                                    77 Hudson Street
-                                    <div class="contact-sub">New York, NY 10013</div>
-                                </td>
-                                <td>Head Office - New York</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Details">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit Contact Info">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete Contact Info">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="Sales" data-location="Branch Office - Texas">
+            <td>#EMP-1004</td>
+            <td>Emily Carter</td>
+            <td>Account Executive</td>
+            <td>Sales</td>
+            <td>emily.carter.personal@gmail.com</td>
+            <td>emily.carter@abctech.com</td>
+            <td>+1 555-0404</td>
+            <td>James Carter (Father)</td>
+            <td>+1 555-1404</td>
+            <td>22 Longhorn Drive</td>
+            <td>Dallas, TX 75201</td>
+            <td>Branch Office - Texas</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                    <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                    <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="Sales" data-location="Branch Office - California">
-                                <td>#EMP-1007</td>
-                                <td>
-                                    <div class="emp-name">Sophia Lee</div>
-                                    <div class="emp-sub">Sales Associate • Sales</div>
-                                </td>
-                                <td>
-                                    <div>sophia.lee.personal@gmail.com</div>
-                                    <div class="contact-sub">Company: sophia.lee@abctech.com</div>
-                                </td>
-                                <td>+1 555-0707</td>
-                                <td>
-                                    <div>Michael Lee (Father)</div>
-                                    <div class="contact-sub">+1 555-1707</div>
-                                </td>
-                                <td>
-                                    9 Sunset Boulevard
-                                    <div class="contact-sub">Los Angeles, CA 90001</div>
-                                </td>
-                                <td>Branch Office - California</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Details">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit Contact Info">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete Contact Info">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+        <tr data-department="Engineering" data-location="Remote">
+            <td>#EMP-1005</td>
+            <td>Rahul Sharma</td>
+            <td>DevOps Engineer</td>
+            <td>Engineering</td>
+            <td>rahul.sharma.personal@gmail.com</td>
+            <td>rahul.sharma@abctech.com</td>
+            <td>+91 98765 12345</td>
+            <td>Rohit Sharma (Brother)</td>
+            <td>+91 98765 54321</td>
+            <td>14 MG Road</td>
+            <td>Bengaluru, KA 560001</td>
+            <td>Remote</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                    <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                    <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </td>
+        </tr>
 
-                            <tr data-department="HR" data-location="Remote">
-                                <td>#EMP-1008</td>
-                                <td>
-                                    <div class="emp-name">Priya Nair</div>
-                                    <div class="emp-sub">HR Executive • HR</div>
-                                </td>
-                                <td>
-                                    <div>priya.nair.personal@yahoo.com</div>
-                                    <div class="contact-sub">Company: priya.nair@abctech.com</div>
-                                </td>
-                                <td>+91 99887 66554</td>
-                                <td>
-                                    <div>Anil Nair (Father)</div>
-                                    <div class="contact-sub">+91 99887 11223</div>
-                                </td>
-                                <td>
-                                    21 Marine Drive
-                                    <div class="contact-sub">Kochi, KL 682001</div>
-                                </td>
-                                <td>Remote</td>
-                                <td>
-                                    <div class="table-actions">
-                                        <button class="icon-btn view" title="View Details">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button class="icon-btn edit" title="Edit Contact Info">
-                                            <i class="fa-solid fa-pen"></i>
-                                        </button>
-                                        <button class="icon-btn delete" title="Delete Contact Info">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <tr data-department="Finance" data-location="Head Office - New York">
+            <td>#EMP-1006</td>
+            <td>Oliver Brown</td>
+            <td>Financial Analyst</td>
+            <td>Finance</td>
+            <td>oliver.brown.personal@mail.com</td>
+            <td>oliver.brown@abctech.com</td>
+            <td>+1 555-0606</td>
+            <td>Emma Brown (Sister)</td>
+            <td>+1 555-1606</td>
+            <td>77 Hudson Street</td>
+            <td>New York, NY 10013</td>
+            <td>Head Office - New York</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                    <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                    <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr data-department="Sales" data-location="Branch Office - California">
+            <td>#EMP-1007</td>
+            <td>Sophia Lee</td>
+            <td>Sales Associate</td>
+            <td>Sales</td>
+            <td>sophia.lee.personal@gmail.com</td>
+            <td>sophia.lee@abctech.com</td>
+            <td>+1 555-0707</td>
+            <td>Michael Lee (Father)</td>
+            <td>+1 555-1707</td>
+            <td>9 Sunset Boulevard</td>
+            <td>Los Angeles, CA 90001</td>
+            <td>Branch Office - California</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                    <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                    <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr data-department="HR" data-location="Remote">
+            <td>#EMP-1008</td>
+            <td>Priya Nair</td>
+            <td>HR Executive</td>
+            <td>HR</td>
+            <td>priya.nair.personal@yahoo.com</td>
+            <td>priya.nair@abctech.com</td>
+            <td>+91 99887 66554</td>
+            <td>Anil Nair (Father)</td>
+            <td>+91 99887 11223</td>
+            <td>21 Marine Drive</td>
+            <td>Kochi, KL 682001</td>
+            <td>Remote</td>
+            <td>
+                <div class="table-actions">
+                    <button class="icon-btn view"><i class="fa-solid fa-eye"></i></button>
+                    <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                    <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
                 </div>
 
                 <div class="table-footer">
